@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* *{
+  margin:0;
+  padding:6;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#ffffff;
+  color:#0f172a;
+} */
+ @keyframes scrollY {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-y {
+  animation: scrollY 20s linear infinite;
+}
+
+.animate-scroll-y:hover {
+  animation-play-state: paused;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
