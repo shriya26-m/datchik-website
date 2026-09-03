@@ -6,13 +6,13 @@ export default function Services() {
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-[4px] text-blue-600">
+          <span className="font-semibold uppercase tracking-[4px] text-blue-500">
             Our Services
           </span>
 
           <h2 className="mt-4 text-5xl font-bold text-slate-900">
             Engineering Excellence,
-            <span className="text-blue-600"> Delivered.</span>
+            <span className="text-blue-500"> Delivered.</span>
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">

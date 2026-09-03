@@ -22,13 +22,13 @@ export default function Industries() {
           className="mb-20 text-center"
         >
 
-          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold uppercase tracking-[3px] text-blue-600">
+          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold uppercase tracking-[3px] text-blue-500">
             Industries We Serve
           </span>
 
           <h2 className="mt-6 text-5xl font-bold text-slate-900">
             Engineering Solutions For
-            <span className="text-blue-600"> Every Industry</span>
+            <span className="text-blue-500"> Every Industry</span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
@@ -66,7 +66,7 @@ export default function Industries() {
                       {industry.number}
                     </span>
 
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 text-blue-600 transition group-hover:bg-white group-hover:text-blue-600">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 text-blue-500 transition group-hover:bg-white group-hover:text-blue-600">
 
                       <Icon size={30} />
 

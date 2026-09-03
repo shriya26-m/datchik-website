@@ -11,25 +11,26 @@ import {
 
 const features = [
   {
-    icon: <FaLightbulb />,
-    title: "Lighting Solutions",
-    desc: "Domestic, Commercial & Decorative Lighting",
-  },
-  {
     icon: <FaMicrochip />,
     title: "Embedded Engineering",
     desc: "PCB Design, Firmware & IoT Development",
-  },
-  {
-    icon: <FaHeartbeat />,
-    title: "Healthcare Electronics",
-    desc: "Heating Belts & Body Massagers",
   },
   {
     icon: <FaWifi />,
     title: "IoT Solutions",
     desc: "Industrial Automation & Smart Devices",
   },
+  {
+    icon: <FaHeartbeat />,
+    title: "Healthcare Electronics",
+    desc: "Heating Belts & Body Massagers",
+  },
+  
+   {
+    icon: <FaLightbulb />,
+    title: "Lighting Solutions",
+    desc: "Domestic, Commercial & Decorative Lighting",
+  }
 ];
 
 export default function About() {
@@ -91,13 +92,13 @@ export default function About() {
 
           <div>
 
-            <span className="uppercase tracking-widest text-blue-600 font-semibold">
+            <span className="uppercase tracking-widest text-blue-500 font-semibold">
               About Company
             </span>
 
             <h2 className="text-5xl font-bold mt-4 leading-tight text-slate-900">
               Engineering
-              <span className="text-blue-600"> Innovation </span>
+              <span className="text-blue-500"> Innovation </span>
               For A Smarter Tomorrow
             </h2>
 
@@ -119,7 +120,7 @@ export default function About() {
                   className="bg-white rounded-2xl p-5 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition duration-300"
                 >
 
-                  <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 text-xl mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-500 text-xl mb-4">
                     {item.icon}
                   </div>
 
@@ -141,7 +142,7 @@ export default function About() {
             <div className="grid grid-cols-4 gap-6 mt-12">
 
               <div>
-                <h3 className="text-3xl font-bold text-blue-600">
+                <h3 className="text-3xl font-bold text-blue-500">
                   50+
                 </h3>
                 <p className="text-gray-500 text-sm">
@@ -150,7 +151,7 @@ export default function About() {
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold text-blue-600">
+                <h3 className="text-3xl font-bold text-blue-500">
                   100+
                 </h3>
                 <p className="text-gray-500 text-sm">
@@ -159,7 +160,7 @@ export default function About() {
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold text-blue-600">
+                <h3 className="text-3xl font-bold text-blue-500">
                   24/7
                 </h3>
                 <p className="text-gray-500 text-sm">
@@ -168,7 +169,7 @@ export default function About() {
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold text-blue-600">
+                <h3 className="text-3xl font-bold text-blue-500">
                   5★
                 </h3>
                 <p className="text-gray-500 text-sm">
@@ -180,7 +181,7 @@ export default function About() {
 
             {/* Button */}
 
-            <button className="mt-12 flex items-center gap-3 bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl text-white font-semibold transition duration-300 hover:scale-105">
+            <button className="mt-12 flex items-center gap-3 bg-blue-500 hover:bg-blue-700 px-8 py-4 rounded-xl text-white font-semibold transition duration-300 hover:scale-105">
 
               Learn More
 

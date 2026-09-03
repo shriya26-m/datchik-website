@@ -4,12 +4,7 @@ import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 
 const products = [
-  {
-    title: "Lighting Solutions",
-    image: "/images/products/lighting.jpg",
-    description:
-      "Energy-efficient LED Bulbs, Panel Lights, Tube Lights, Commercial Lighting and Decorative Lighting Solutions.",
-  },
+  
   {
     title: "Embedded Engineering",
     image: "/images/products/embedded.jpg",
@@ -28,6 +23,12 @@ const products = [
     description:
       "Smart Attendance Systems, Industrial Automation, IoT Devices and Embedded Control Solutions.",
   },
+  {
+    title: "Lighting Solutions",
+    image: "/images/products/lighting.jpg",
+    description:
+      "Energy-efficient LED Bulbs, Panel Lights, Tube Lights, Commercial Lighting and Decorative Lighting Solutions.",
+  }
 ];
 
 export default function Products() {
@@ -36,13 +37,13 @@ export default function Products() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading */}
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <span className="inline-block text-blue-600 uppercase tracking-[4px] font-semibold">
+          <span className="inline-block text-blue-500 uppercase tracking-[4px] font-semibold">
             Our Products
           </span>
 
           <h2 className="mt-5 text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
             Innovative Electronics
-            <span className="text-blue-600"> Products</span>
+            <span className="text-blue-500"> Products</span>
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -81,7 +82,7 @@ export default function Products() {
                   {item.description}
                 </p>
 
-                <button className="mt-8 flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 group-hover:gap-4">
+                <button className="mt-8 flex items-center gap-2 font-semibold text-blue-500 transition-all duration-300 group-hover:gap-4">
                   Learn More
                   <FaArrowRight />
                 </button>
@@ -92,7 +93,7 @@ export default function Products() {
 
         {/* Bottom CTA */}
         <div className="mt-20 flex justify-center">
-          <button className="rounded-xl bg-blue-600 px-10 py-4 text-white font-semibold shadow-lg transition-all duration-300 hover:bg-blue-700 hover:scale-105">
+          <button className="rounded-xl bg-blue-500 px-10 py-4 text-white font-semibold shadow-lg transition-all duration-300 hover:bg-blue-700 hover:scale-105">
             View All Products
           </button>
         </div>

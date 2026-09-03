@@ -23,9 +23,7 @@ export default function ServiceCard({
         {description}
       </p>
 
-      <button className="mt-6 font-semibold text-blue-600 transition-all group-hover:translate-x-2">
-        Learn More →
-      </button>
+     
     </div>
   );
 }

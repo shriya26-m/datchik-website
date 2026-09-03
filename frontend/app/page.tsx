@@ -1,5 +1,5 @@
 
-import Navbar from "@/components/layout/Navbar";
+// import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
 import About from "@/components/home/About";
 import Products from "@/components/home/Products";
@@ -7,13 +7,13 @@ import Services from "@/components/home/Services";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Industries from "@/components/home/Industries";
 import ContactCTA from "@/components/ContactCTA";
-import Footer from "@/components/layout/Footer";
+// import Footer from "@/components/layout/Footer";
 
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <About />
       <Products />
@@ -21,7 +21,7 @@ export default function Home() {
       <WhyChooseUs />
       <Industries />
       <ContactCTA />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
