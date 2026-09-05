@@ -56,16 +56,18 @@ export default function About() {
       {[
         "/images/about/expo.jpg",
         "/images/about/team1.jpg",
-        "/images/about/products.jpg",
-        "/images/about/tradeshow.jpg",
-        "/images/about/company.png",
+        // "/images/about/products.jpg",
+        // "/images/about/tradeshow.jpg",
+        // "/images/about/company.png",
 
         // Duplicate for infinite loop
-        "/images/about/expo1.jpg",
+        "/images/about/expo.jpg",
         "/images/about/team1.jpg",
-        "/images/about/products.jpg",
-        "/images/about/lab.jpg",
-        "/images/about/company.png",
+        // "/images/about/products.jpg",
+        // 
+        
+        // "/images/about/lab.jpg",
+        // "/images/about/company.png",
       ].map((img, index) => (
         <Image
           key={index}
