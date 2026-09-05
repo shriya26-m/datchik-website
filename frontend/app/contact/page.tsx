@@ -1,9 +1,9 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function ContactPage() {
+function ContactForm() {
   const searchParams = useSearchParams();
 
   const productFromUrl = searchParams.get("product") || "";
@@ -30,12 +30,12 @@ export default function ContactPage() {
       [e.target.name]: e.target.value,
     });
   }
+
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     setError("");
 
-    // Frontend validation
     if (!form.name.trim()) {
       setError("Please enter your name.");
       return;
@@ -93,37 +93,12 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white text-[#061426]">
-      {/* ================= HERO ================= */}
-
-      <section className="relative overflow-hidden bg-[#061426] px-6 pb-24 pt-36 text-white lg:px-12">
-        {/* Glow */}
-
-        <div className="pointer-events-none absolute -right-40 top-10 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-[130px]" />
-
-        <div className="mx-auto max-w-7xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-400">
-            Contact Datchick Electronics
-          </p>
-
-          <div className="mt-7 grid gap-10 lg:grid-cols-2 lg:items-end">
-            <h1 className="text-5xl font-semibold leading-[1.05] md:text-7xl">
-              Let's build
-              <span className="block text-cyan-400">something useful.</span>
-            </h1>
-
-            <p className="max-w-xl text-lg leading-8 text-slate-400">
-              Have a product requirement, custom electronics idea or technical
-              enquiry? Tell us what you need and our team will get back to you.
-            </p>
-          </div>
-        </div>
-      </section>
-
+    <>
       {/* ================= CONTACT CONTENT ================= */}
 
       <section className="px-6 py-24 lg:px-12">
         <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.7fr_1.3fr]">
+
           {/* ================= LEFT ================= */}
 
           <div>
@@ -139,14 +114,13 @@ export default function ContactPage() {
             </h2>
 
             <p className="mt-6 max-w-md leading-7 text-slate-500">
-              Whether you are looking for one of our existing products or have a
-              custom electronics requirement, our team is ready to discuss it
+              Whether you are looking for one of our existing products or have
+              a custom electronics requirement, our team is ready to discuss it
               with you.
             </p>
 
-            {/* CONTACT DETAILS */}
-
             <div className="mt-12 space-y-8">
+
               <div className="border-t border-slate-200 pt-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
                   Email
@@ -176,16 +150,18 @@ export default function ContactPage() {
                   Our team will review your enquiry.
                 </p>
               </div>
+
             </div>
           </div>
 
           {/* ================= FORM ================= */}
 
           <div className="rounded-[32px] border border-slate-200 bg-slate-50 p-7 md:p-10">
+
             {submitted ? (
-              /* SUCCESS */
 
               <div className="flex min-h-[550px] flex-col items-center justify-center text-center">
+
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#061426] text-2xl text-cyan-400">
                   ✓
                 </div>
@@ -200,14 +176,19 @@ export default function ContactPage() {
                 </p>
 
                 <button
+                  type="button"
                   onClick={() => setSubmitted(false)}
                   className="mt-8 rounded-full border border-slate-300 px-6 py-3 text-sm font-medium transition hover:border-[#061426]"
                 >
                   Send Another Enquiry
                 </button>
+
               </div>
+
             ) : (
+
               <form onSubmit={handleSubmit} className="space-y-7">
+
                 {error && (
                   <div className="rounded-xl border border-red-200 bg-red-50 px-5 py-4 text-sm text-red-600">
                     {error}
@@ -217,6 +198,7 @@ export default function ContactPage() {
                 {/* NAME + EMAIL */}
 
                 <div className="grid gap-7 md:grid-cols-2">
+
                   <div>
                     <label className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                       Your Name
@@ -248,6 +230,7 @@ export default function ContactPage() {
                       className="mt-3 w-full border-b border-slate-300 bg-transparent px-0 py-4 text-base outline-none transition placeholder:text-slate-400 focus:border-[#061426]"
                     />
                   </div>
+
                 </div>
 
                 {/* PHONE */}
@@ -280,17 +263,25 @@ export default function ContactPage() {
                     onChange={handleChange}
                     className="mt-3 w-full border-b border-slate-300 bg-transparent px-0 py-4 text-base outline-none transition focus:border-[#061426]"
                   >
-                    <option value="">Select a product or requirement</option>
+                    <option value="">
+                      Select a product or requirement
+                    </option>
 
                     <option value="Orthopaedic Heat Belt">
                       Orthopaedic Heat Belt
                     </option>
 
-                    <option value="BP Monitor">BP Monitor</option>
+                    <option value="BP Monitor">
+                      BP Monitor
+                    </option>
 
-                    <option value="Thermometer">Thermometer</option>
+                    <option value="Thermometer">
+                      Thermometer
+                    </option>
 
-                    <option value="IR Meter">IR Meter</option>
+                    <option value="IR Meter">
+                      IR Meter
+                    </option>
 
                     <option value="LEL Gas Detector with Display">
                       LEL Gas Detector with Display
@@ -304,25 +295,41 @@ export default function ContactPage() {
                       Towel Warmer Controller Kit
                     </option>
 
-                    <option value="Body Massager">Body Massager</option>
+                    <option value="Body Massager">
+                      Body Massager
+                    </option>
 
                     <option value="Orthopaedic Controller Kit">
                       Orthopaedic Controller Kit
                     </option>
 
-                    <option value="Panel Light">Panel Light</option>
+                    <option value="Panel Light">
+                      Panel Light
+                    </option>
 
-                    <option value="Floodlight">Floodlight</option>
+                    <option value="Floodlight">
+                      Floodlight
+                    </option>
 
-                    <option value="Streetlight">Streetlight</option>
+                    <option value="Streetlight">
+                      Streetlight
+                    </option>
 
-                    <option value="LED Bulb">LED Bulb</option>
+                    <option value="LED Bulb">
+                      LED Bulb
+                    </option>
 
-                    <option value="AC/DC Inverter">AC/DC Inverter</option>
+                    <option value="AC/DC Inverter">
+                      AC/DC Inverter
+                    </option>
 
-                    <option value="Decorative Lights">Decorative Lights</option>
+                    <option value="Decorative Lights">
+                      Decorative Lights
+                    </option>
 
-                    <option value="Concealed Light">Concealed Light</option>
+                    <option value="Concealed Light">
+                      Concealed Light
+                    </option>
 
                     <option value="Custom Electronics Requirement">
                       Custom Electronics Requirement
@@ -351,6 +358,7 @@ export default function ContactPage() {
                 {/* SUBMIT */}
 
                 <div className="flex items-center justify-between gap-5 pt-3">
+
                   <p className="max-w-xs text-xs leading-5 text-slate-400">
                     By submitting this form, you are sending your requirement to
                     Datchick Electronics.
@@ -379,19 +387,78 @@ export default function ContactPage() {
                       </>
                     )}
                   </button>
+
                 </div>
+
               </form>
+
             )}
+
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <main className="min-h-screen bg-white text-[#061426]">
+
+      {/* ================= HERO ================= */}
+
+      <section className="relative overflow-hidden bg-[#061426] px-6 pb-24 pt-36 text-white lg:px-12">
+
+        <div className="pointer-events-none absolute -right-40 top-10 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-[130px]" />
+
+        <div className="mx-auto max-w-7xl">
+
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-400">
+            Contact Datchick Electronics
+          </p>
+
+          <div className="mt-7 grid gap-10 lg:grid-cols-2 lg:items-end">
+
+            <h1 className="text-5xl font-semibold leading-[1.05] md:text-7xl">
+              Let's build
+              <span className="block text-cyan-400">
+                something useful.
+              </span>
+            </h1>
+
+            <p className="max-w-xl text-lg leading-8 text-slate-400">
+              Have a product requirement, custom electronics idea or technical
+              enquiry? Tell us what you need and our team will get back to you.
+            </p>
+
           </div>
         </div>
       </section>
 
+      {/* FORM */}
+
+      <Suspense
+        fallback={
+          <section className="px-6 py-24 lg:px-12">
+            <div className="mx-auto max-w-7xl text-center text-slate-500">
+              Loading contact form...
+            </div>
+          </section>
+        }
+      >
+        <ContactForm />
+      </Suspense>
+
       {/* ================= BOTTOM CTA ================= */}
 
       <section className="px-6 pb-24 lg:px-12">
+
         <div className="mx-auto max-w-7xl border-t border-slate-200 pt-16">
+
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+
             <div>
+
               <p className="text-xs uppercase tracking-[0.3em] text-blue-600">
                 Datchick Electronics
               </p>
@@ -399,15 +466,18 @@ export default function ContactPage() {
               <h3 className="mt-3 text-2xl font-semibold">
                 Engineering ideas into practical solutions.
               </h3>
+
             </div>
 
             <p className="max-w-md text-sm leading-6 text-slate-500">
               Biomedical electronics, safety systems, smart controllers,
               wellness electronics and lighting solutions.
             </p>
+
           </div>
         </div>
       </section>
+
     </main>
   );
 }
