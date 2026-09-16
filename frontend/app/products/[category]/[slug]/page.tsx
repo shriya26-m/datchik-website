@@ -149,117 +149,101 @@ const products = {
     ],
   },
 
-  "lighting/panel-light": {
-    number: "01",
-    name: "Panel Light",
-    category: "Lighting",
-    label: "Indoor Lighting",
-    image: "/images/products/lighting/panel-light.jpg",
-    description:
-      "Modern lighting designed for clean, efficient and practical indoor illumination.",
-    applications: [
-      "Homes",
-      "Offices",
-      "Commercial spaces",
-      "Interior environments",
-    ],
-  },
+ "lighting/panel-light": {
+  number: "01",
+  name: "Panel Light",
+  category: "Lighting",
+  label: "Indoor Lighting",
+  image: "/images/products/lighting/panellight.png",
+  description:
+    "Modern lighting designed for clean, efficient and practical indoor illumination.",
+  applications: [
+    "Homes",
+    "Offices",
+    "Commercial spaces",
+    "Interior environments",
+  ],
+},
 
-  "lighting/flood-light": {
-    number: "02",
-    name: "Floodlight",
-    category: "Lighting",
-    label: "Outdoor Lighting",
-    image: "/images/products/lighting/flood-light.jpg",
-    description:
-      "High-output lighting designed for outdoor and large-area illumination.",
-    applications: [
-      "Outdoor areas",
-      "Industrial spaces",
-      "Buildings",
-      "Large-area lighting",
-    ],
-  },
+"lighting/flood-light": {
+  number: "02",
+  name: "Floodlight",
+  category: "Lighting",
+  label: "Outdoor Lighting",
+  image: "/images/products/lighting/floodlight.png",
+  description:
+    "High-output lighting designed for outdoor and large-area illumination.",
+  applications: [
+    "Outdoor areas",
+    "Industrial spaces",
+    "Buildings",
+    "Large-area lighting",
+  ],
+},
 
-  "lighting/street-light": {
-    number: "03",
-    name: "Streetlight",
-    category: "Lighting",
-    label: "Infrastructure Lighting",
-    image: "/images/products/lighting/street-light.jpg",
-    description:
-      "Reliable lighting designed for roads, pathways and outdoor infrastructure.",
-    applications: [
-      "Roads",
-      "Pathways",
-      "Public spaces",
-      "Outdoor infrastructure",
-    ],
-  },
+"lighting/street-light": {
+  number: "03",
+  name: "Streetlight",
+  category: "Lighting",
+  label: "Infrastructure Lighting",
+  image: "/images/products/lighting/streetlight.png",
+  description:
+    "Reliable lighting designed for roads, pathways and outdoor infrastructure.",
+  applications: [
+    "Roads",
+    "Pathways",
+    "Public spaces",
+    "Outdoor infrastructure",
+  ],
+},
 
-  "lighting/led-bulb": {
-    number: "04",
-    name: "LED Bulb",
-    category: "Lighting",
-    label: "General Lighting",
-    image: "/images/products/lighting/led-bulb.jpg",
-    description:
-      "Energy-efficient LED lighting solutions available from 0W to 15W.",
-    applications: [
-      "Residential lighting",
-      "Commercial spaces",
-      "Indoor illumination",
-      "Everyday lighting",
-    ],
-  },
+"lighting/led-bulb": {
+  number: "04",
+  name: "LED Bulb",
+  category: "Lighting",
+  label: "General Lighting",
+  image: "/images/products/lighting/LEDBULB.png",
+  description:
+    "Energy-efficient LED lighting solutions available from 0W to 15W.",
+  applications: [
+    "Residential lighting",
+    "Commercial spaces",
+    "Indoor illumination",
+    "Everyday lighting",
+  ],
+},
 
-  "lighting/ac-dc-inverter": {
-    number: "05",
-    name: "AC/DC Inverter",
-    category: "Lighting",
-    label: "Power Electronics",
-    image: "/images/products/lighting/ac-dc-inverter.jpg",
-    description:
-      "A power conversion solution designed for lighting and electronic applications.",
-    applications: [
-      "Lighting systems",
-      "Electronic applications",
-      "Power conversion",
-      "Control systems",
-    ],
-  },
+"lighting/ac-dc-inverter": {
+  number: "05",
+  name: "AC/DC Inverter",
+  category: "Lighting",
+  label: "Power Electronics",
+  image: "/images/products/lighting/ac-dc.png",
+  description:
+    "A power conversion solution designed for lighting and electronic applications.",
+  applications: [
+    "Lighting systems",
+    "Electronic applications",
+    "Power conversion",
+    "Control systems",
+  ],
+},
 
-  "lighting/decorative-lights": {
-    number: "06",
-    name: "Decorative Lights",
-    category: "Lighting",
-    label: "Decorative Lighting",
-    image: "/images/products/lighting/decorative-lights.jpg",
-    description:
-      "Lighting solutions designed to enhance interiors and architectural environments.",
-    applications: [
-      "Interior decoration",
-      "Architectural spaces",
-      "Commercial environments",
-      "Decorative applications",
-    ],
-  },
-
-  "lighting/concealed-light": {
-    number: "07",
-    name: "Concealed Light",
-    category: "Lighting",
-    label: "Architectural Lighting",
-    image: "/images/products/lighting/concealed-light.jpg",
-    description:
-      "Minimal architectural lighting designed for modern interior applications.",
-    applications: [
-      "Modern interiors",
-      "Architectural spaces",
-      "Ceiling applications",
-      "Interior lighting",
-    ],
-  },
+"lighting/concealed-light": {
+  number: "06",
+  name: "Concealed Light",
+  category: "Lighting",
+  label: "Architectural Lighting",
+  image: "/images/products/lighting/concealedlight.png",
+  description:
+    "Minimal architectural lighting designed for modern interior applications.",
+  applications: [
+    "Modern interiors",
+    "Architectural spaces",
+    "Ceiling applications",
+    "Interior lighting",
+  ],
+},
 };
 
 export function generateStaticParams() {
@@ -346,13 +330,14 @@ export default async function ProductDetailPage({
 
                 <div className="relative aspect-[4/3]">
 
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    priority
-                    className="object-contain p-10 transition duration-700 ease-out group-hover:scale-105 md:p-16"
-                  />
+                 <Image
+  src={product.image}
+  alt={product.name}
+  fill
+  priority
+  sizes="(max-width: 1024px) 100vw, 50vw"
+  className="object-contain p-10 transition duration-700 ease-out group-hover:scale-105 md:p-16"
+/>
 
                 </div>
 

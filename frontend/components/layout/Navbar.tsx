@@ -312,7 +312,7 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
         <Link href="/" onClick={closeMenu}>
           <Image
-            src="/images/logo/datchik-logo.jpeg"
+            src="/images/logo/datchiklogo.png"
             alt="Datchick Electronics"
             width={180}
             height={60}
@@ -370,13 +370,6 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
                       Explore Datchick Products
                     </h3>
                   </div>
-
-                  <Link
-                    href="/products"
-                    className="text-sm font-semibold text-sky-600 hover:text-sky-700"
-                  >
-                    View All Products →
-                  </Link>
 
                 </div>
 

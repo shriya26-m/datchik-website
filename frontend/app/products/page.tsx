@@ -50,7 +50,7 @@ const categories = [
     label: "Lighting Electronics",
     description:
       "Modern lighting products including panel lights, floodlights, streetlights and decorative solutions.",
-    image: "/images/products/lighting/panel-light.jpg",
+    image: "/images/products/lighting/panellight.png",
   },
 ];
 

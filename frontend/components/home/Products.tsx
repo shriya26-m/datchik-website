@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -36,10 +35,8 @@ export default function Products() {
   return (
     <section className="bg-gradient-to-b from-slate-50 via-white to-slate-100 py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
         {/* Heading */}
         <div className="mx-auto mb-20 max-w-3xl text-center">
-
           <span className="inline-block font-semibold uppercase tracking-[4px] text-blue-500">
             Our Products
           </span>
@@ -55,20 +52,16 @@ export default function Products() {
             spans Lighting, Embedded Engineering, Healthcare Electronics and IoT
             Solutions.
           </p>
-
         </div>
 
         {/* Product Cards */}
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-
           {products.map((item, index) => (
-
             <Link
               href="/products"
               key={index}
               className="group block overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
             >
-
               {/* Image */}
               <div className="overflow-hidden">
                 <Image
@@ -82,7 +75,6 @@ export default function Products() {
 
               {/* Content */}
               <div className="p-7">
-
                 <h3 className="text-2xl font-bold text-slate-900">
                   {item.title}
                 </h3>
@@ -96,29 +88,21 @@ export default function Products() {
                   Learn More
                   <FaArrowRight />
                 </div>
-
               </div>
-
             </Link>
-
           ))}
-
         </div>
 
         {/* Bottom CTA */}
         <div className="mt-20 flex justify-center">
-
           <Link
             href="/products"
             className="rounded-xl bg-blue-500 px-10 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-700"
           >
             View All Products
           </Link>
-
         </div>
-
       </div>
     </section>
   );
 }
-

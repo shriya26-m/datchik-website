@@ -138,11 +138,11 @@ export default function Footer() {
             <Link href="/" aria-label="Datchick Electronics Home">
 
               <Image
-                src="/images/logo/datchik-logo.jpeg"
+                src="/images/logo/datchiklogo.png"
                 alt="Datchick Electronics"
                 width={170}
                 height={60}
-                className="rounded-xl bg-white p-2"
+                className="rounded-xl p-2"
               />
 
             </Link>

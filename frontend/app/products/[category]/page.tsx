@@ -110,7 +110,7 @@ const categories = {
       {
         name: "Floodlight",
         slug: "flood-light",
-        image: "/images/products/lighting/flood-light.jpg",
+        image: "/images/products/lighting/floodlight.png",
         description: "High-output outdoor lighting solution.",
       },
       {
@@ -245,25 +245,18 @@ export default async function CategoryPage({
 
                 {/* IMAGE */}
 
-                <div className="relative overflow-hidden rounded-[28px] bg-slate-100">
+              <div className="relative h-[580px] overflow-hidden rounded-[28px] bg-slate-100 sm:h-[420px] lg:h-[450px]">
+  <Image
+    src={product.image}
+    alt={product.name}
+    fill
+    className="object-contain scale-110 transition duration-700 group-hover:scale-115"
+  />
 
-                  <div className="relative aspect-[4/3]">
-
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-contain p-8 transition duration-700 group-hover:scale-105"
-                    />
-
-                  </div>
-
-                  <div className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold backdrop-blur">
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-
-                </div>
-
+  <div className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold backdrop-blur">
+    {String(index + 1).padStart(2, "0")}
+  </div>
+</div>
 
                 {/* TEXT */}
 
