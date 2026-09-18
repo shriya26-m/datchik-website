@@ -4,7 +4,7 @@ import { FormEvent, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 const GOOGLE_SCRIPT_URL =
-        "https://script.google.com/macros/s/AKfycbzt0NFDnYc2enZCMoIaBIJGTFqruLfleaSplh25TPdMgmikc29jzmSmkTfp-axD9Nua/exec";
+        "https://script.google.com/macros/s/AKfycbxNZ5bXUvvO9qe48c445Y2R0LSKx4W0_OdOgl14GG5sn6WamHC8qOSRBBQIETA-Db4r/exec";
 
 function ContactForm() {
   const searchParams = useSearchParams();

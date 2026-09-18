@@ -314,6 +314,7 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
           <Image
             src="/images/logo/datchiklogo.png"
             alt="Datchick Electronics"
+            // loading="eager"
             width={180}
             height={60}
             priority
