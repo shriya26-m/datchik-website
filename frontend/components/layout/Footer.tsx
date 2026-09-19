@@ -2,12 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FiArrowUpRight,
-  FiPhone,
-  FiMail,
-  FiMapPin,
-} from "react-icons/fi";
+import { FiArrowUpRight, FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 
 import {
   FaFacebookF,
@@ -112,7 +107,6 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-slate-950 text-white">
-
       {/* =========================
           BACKGROUND GLOW
       ========================= */}
@@ -126,17 +120,13 @@ export default function Footer() {
       ========================= */}
 
       <div className="relative mx-auto max-w-7xl px-6 py-20">
-
-        <div className="grid gap-14 lg:grid-cols-5">
-
+        <div className="grid  lg:grid-cols-5">
           {/* =========================
               COMPANY
           ========================= */}
 
           <div className="lg:col-span-2">
-
             <Link href="/" aria-label="Datchick Electronics Home">
-
               <Image
                 src="/images/logo/datchiklogo.png"
                 alt="Datchick Electronics"
@@ -144,14 +134,12 @@ export default function Footer() {
                 height={60}
                 className="rounded-xl p-2"
               />
-
             </Link>
 
             <p className="mt-8 max-w-md leading-8 text-slate-300">
-              Datchick Electronics Pvt. Ltd. specializes in
-              lighting solutions, embedded engineering,
-              PCB design, IoT development, healthcare
-              electronics and electronics manufacturing services.
+              Datchick Electronics Pvt. Ltd. specializes in embedded
+              engineering, PCB design, IoT development, healthcare electronics
+              and electronics manufacturing services.
             </p>
 
             {/* =========================
@@ -159,9 +147,7 @@ export default function Footer() {
             ========================= */}
 
             <div className="mt-8 flex gap-4">
-
               {socialLinks.map((social) => {
-
                 const Icon = social.icon;
 
                 return (
@@ -177,11 +163,8 @@ export default function Footer() {
                     <Icon size={18} />
                   </a>
                 );
-
               })}
-
             </div>
-
           </div>
 
           {/* =========================
@@ -189,37 +172,25 @@ export default function Footer() {
           ========================= */}
 
           <div>
-
-            <h3 className="mb-6 text-xl font-semibold">
-              Quick Links
-            </h3>
+            <h3 className="mb-6 text-xl font-semibold">Quick Links</h3>
 
             <ul className="space-y-4">
-
               {quickLinks.map((item) => (
-
                 <li key={item.name}>
-
                   <Link
                     href={item.href}
                     className="group flex items-center gap-2 text-slate-300 transition hover:text-white"
                   >
-
                     <FiArrowUpRight
                       size={16}
                       className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                     />
 
                     {item.name}
-
                   </Link>
-
                 </li>
-
               ))}
-
             </ul>
-
           </div>
 
           {/* =========================
@@ -227,37 +198,25 @@ export default function Footer() {
           ========================= */}
 
           <div>
-
-            <h3 className="mb-6 text-xl font-semibold">
-              Products
-            </h3>
+            <h3 className="mb-6 text-xl font-semibold">Products</h3>
 
             <ul className="space-y-4">
-
               {products.map((product) => (
-
                 <li key={product.name}>
-
                   <Link
                     href={product.href}
                     className="group flex items-start gap-2 text-slate-300 transition hover:text-white"
                   >
-
                     <FiArrowUpRight
                       size={16}
                       className="mt-1 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                     />
 
                     <span>{product.name}</span>
-
                   </Link>
-
                 </li>
-
               ))}
-
             </ul>
-
           </div>
 
           {/* =========================
@@ -265,35 +224,17 @@ export default function Footer() {
           ========================= */}
 
           <div>
-
-            <h3 className="mb-6 text-xl font-semibold">
-              Contact
-            </h3>
+            <h3 className="mb-6 text-xl font-semibold">Contact</h3>
 
             <div className="space-y-6 text-slate-300">
-
               {/* Address */}
 
               <div className="flex items-start gap-3">
-
-                <FiMapPin
-                  className="mt-1 shrink-0 text-blue-400"
-                  size={18}
-                />
+                <FiMapPin className="mt-1 shrink-0 text-blue-400" size={18} />
 
                 <p className="leading-7">
-                Sector-73
-            
-                  <br />
-                  Noida,
-                  <br />
-                  Gautam buddha Nagar,
-                  <br />
-                  Uttar Pradesh,
-                  <br />
-                  India
+                  H-96,Sector-63, Noida-201301 ,Uttar Pradesh, India
                 </p>
-
               </div>
 
               {/* Phone */}
@@ -302,40 +243,24 @@ export default function Footer() {
                 href="tel:+917307290418"
                 className="flex items-center gap-3 transition hover:text-white"
               >
-
-                <FiPhone
-                  className="shrink-0 text-blue-400"
-                  size={18}
-                />
+                <FiPhone className="shrink-0 text-blue-400" size={18} />
 
                 <span>+91 7307290418</span>
-
               </a>
 
               {/* Email */}
 
               <a
-                href="mailto:datchikelectronics@gmail.com"
-                className="flex items-center gap-3 transition hover:text-white"
+                href="datchikelectronics@gmail.com"
+                className="flex items-center gap-2 transition hover:text-white"
               >
+                <FiMail className="shrink-0 text-blue-400" size={18} />
 
-                <FiMail
-                  className="shrink-0 text-blue-400"
-                  size={18}
-                />
-
-                <span className="break-all">
-                  datchikelectronics@gmail.com
-                </span>
-
+                <span className="break-all">datchikelectronics@gmail.com</span>
               </a>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
 
       {/* =========================
@@ -402,16 +327,13 @@ export default function Footer() {
       ========================= */}
 
       <div className="border-t border-white/10">
-
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-slate-400 md:flex-row">
-
           <p className="text-center md:text-left">
-            © {new Date().getFullYear()} Datchick Electronics Pvt. Ltd.
-            All Rights Reserved.
+            © {new Date().getFullYear()} Datchick Electronics Pvt. Ltd. All
+            Rights Reserved.
           </p>
 
           <div className="flex gap-6">
-
             <Link
               href="/privacy-policy"
               className="transition hover:text-white"
@@ -425,11 +347,8 @@ export default function Footer() {
             >
               Terms & Conditions
             </Link>
-
           </div>
-
         </div>
-
       </div>
 
       {/* =========================
@@ -449,7 +368,6 @@ export default function Footer() {
       >
         ↑
       </button>
-
     </footer>
   );
 }
