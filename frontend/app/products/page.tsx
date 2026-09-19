@@ -24,7 +24,7 @@ const categories = [
 
   {
     number: "03",
-    name: "Datchick Smart Solutions",
+    name: "Datchik Smart Solutions",
     slug: "smart-solutions",
     label: "Smart Electronics",
     description:
@@ -80,7 +80,7 @@ export default function ProductsPage() {
             </h1>
 
             <p className="max-w-xl text-lg leading-8 text-slate-400 lg:pb-2">
-              Explore Datchick Electronics products across biomedical
+              Explore Datchik Electronics products across biomedical
               electronics, gas detection, smart solutions, wellness
               electronics and lighting.
             </p>

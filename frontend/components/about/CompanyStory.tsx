@@ -48,7 +48,7 @@ export default function CompanyStory() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-[36px]">
               <Image
                 src="/images/about/about-hero.png"
-                alt="Datchick Electronics"
+                alt="Datchik Electronics"
                 fill
                 className="object-cover transition duration-700 hover:scale-105"
               />
@@ -74,7 +74,7 @@ export default function CompanyStory() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-sm font-semibold uppercase tracking-[3px] text-blue-600">
-              Datchick Electronics Pvt. Ltd.
+              Datchik Electronics Private Limited
             </p>
 
             <h3 className="mt-5 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
@@ -84,7 +84,7 @@ export default function CompanyStory() {
 
             <div className="mt-8 space-y-6 text-lg leading-8 text-slate-600">
               <p>
-                Datchick Electronics is focused on creating innovative
+                Datchik Electronics is focused on creating innovative
                 electronic products and engineering solutions that combine
                 practical design, modern technology and reliable performance.
               </p>

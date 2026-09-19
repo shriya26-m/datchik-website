@@ -32,7 +32,7 @@
 //         >
 //           <Image
 //             src="/images/logo/datchik-logo.jpeg"
-//             alt="Datchick Electronics"
+//             alt="Datchik Electronics"
 //             width={180}
 //             height={60}
 //             priority
@@ -313,7 +313,7 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
         <Link href="/" onClick={closeMenu}>
           <Image
             src="/images/logo/datchiklogo.png"
-            alt="Datchick Electronics"
+            alt="Datchik Electronics"
             // loading="eager"
             width={180}
             height={60}
@@ -368,7 +368,7 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
                     </p>
 
                     <h3 className="mt-2 text-xl font-semibold text-slate-900">
-                      Explore Datchick Products
+                      Explore Datchik Products
                     </h3>
                   </div>
 

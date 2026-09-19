@@ -156,7 +156,7 @@ function ContactForm() {
                 </h2>
 
                 <p className="mt-4 max-w-md leading-7 text-slate-500">
-                  Thank you for contacting Datchick Electronics. Our team will
+                  Thank you for contacting Datchik Electronics. Our team will
                   review your requirement and get back to you.
                 </p>
 
@@ -315,7 +315,7 @@ function ContactForm() {
                 <div className="flex items-center justify-between gap-5 pt-3">
                   <p className="max-w-xs text-xs leading-5 text-slate-400">
                     By submitting this form, you are sending your requirement to
-                    Datchick Electronics.
+                    Datchik Electronics.
                   </p>
 
                   <button
@@ -361,7 +361,7 @@ export default function ContactPage() {
 
         <div className="mx-auto max-w-7xl">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-400">
-            Contact Datchick Electronics
+            Contact Datchik Electronics
           </p>
 
           <div className="mt-7 grid gap-10 lg:grid-cols-2 lg:items-end">
@@ -399,7 +399,7 @@ export default function ContactPage() {
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-blue-600">
-                Datchick Electronics
+                Datchik Electronics
               </p>
 
               <h3 className="mt-3 text-2xl font-semibold">

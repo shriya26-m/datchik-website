@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    smallText: "ABOUT DATCHICK",
+    smallText: "ABOUT DATCHIK",
     title: "Engineering Ideas.",
     highlight: "Building Possibilities.",
     description:
@@ -73,7 +73,7 @@ export default function AboutHero() {
       <div className="absolute inset-0">
         <Image
           src="/images/about/about-hero.png"
-          alt="Datchick Electronics"
+          alt="Datchik Electronics"
           fill
           priority
           className="object-cover"

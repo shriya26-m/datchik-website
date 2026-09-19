@@ -58,7 +58,7 @@ const categories = {
   },
 
   "smart-solutions": {
-    name: "Datchick Smart Solutions",
+    name: "Datchik Smart Solutions",
     label: "Smart Electronics",
     description:
       "Smart controller solutions developed for connected and automated applications.",
@@ -267,7 +267,7 @@ export default async function CategoryPage({
                     <div>
 
                       <p className="text-xs uppercase tracking-[0.2em] text-blue-600">
-                        Datchick Electronics
+                        Datchik Electronics
                       </p>
 
                       <h3 className="mt-2 text-xl font-semibold transition group-hover:text-blue-600">

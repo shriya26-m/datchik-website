@@ -467,7 +467,7 @@ export default async function ProductDetailPage({
                   </span>
 
                   <span className="mt-2 block font-medium text-[#061426]">
-                    Datchick Electronics
+                    Datchik Electronics
                   </span>
                 </div>
 
@@ -569,7 +569,7 @@ export default async function ProductDetailPage({
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
                 Have a requirement or want to know more about this
-                product? Get in touch with the Datchick Electronics team.
+                product? Get in touch with the Datchik Electronics team.
               </p>
 
               <Link
