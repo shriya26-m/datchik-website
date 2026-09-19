@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-slate-950">
-
       {/* Hero Image Container */}
       <div
         className="
@@ -21,7 +20,7 @@ export default function Hero() {
       >
         <Image
           src="/images/hero/hero2.png"
-          alt="Datchick Electronics - Smart Technology Solutions"
+          alt="Datchik Electronics - Smart Technology Solutions"
           fill
           priority
           sizes="100vw"
@@ -50,7 +49,6 @@ export default function Hero() {
           "
         />
       </div>
-
     </section>
   );
 }
