@@ -137,7 +137,7 @@ export default function Footer() {
             </Link>
 
             <p className="mt-8 max-w-md leading-8 text-slate-300">
-              Datchick Electronics Pvt. Ltd. specializes in embedded
+              Datchik Electronics Pvt. Ltd. specializes in embedded
               engineering, PCB design, IoT development, healthcare electronics
               and electronics manufacturing services.
             </p>
@@ -329,7 +329,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-slate-400 md:flex-row">
           <p className="text-center md:text-left">
-            © {new Date().getFullYear()} Datchick Electronics Pvt. Ltd. All
+            © {new Date().getFullYear()} Datchik Electronics Pvt. Ltd. All
             Rights Reserved.
           </p>
 

@@ -47,7 +47,7 @@ export default function Products() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Datchick Electronics develops high-quality electronic products for
+            Datchik Electronics develops high-quality electronic products for
             residential, commercial and industrial applications. Our expertise
             spans Lighting, Embedded Engineering, Healthcare Electronics and IoT
             Solutions.
