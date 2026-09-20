@@ -209,19 +209,19 @@ const productCategories = [
     ],
   },
 
-  {
-    name: "Body Massage",
-    products: [
-      {
-        name: "Body Massager",
-        href: "/products/body-massage/body-massager",
-      },
-      {
-        name: "Orthopaedic Controller Kit",
-        href: "/products/body-massage/orthopaedic-controller",
-      },
-    ],
-  },
+  //{
+  //   name: "Body Massage",
+  //   products: [
+  //     {
+  //       name: "Body Massager",
+  //       href: "/products/body-massage/body-massager",
+  //     },
+  //     {
+  //       name: "Orthopaedic Controller Kit",
+  //       href: "/products/body-massage/orthopaedic-controller",
+  //     },
+  //   ],
+  // },
 
   {
     name: "Lighting",
