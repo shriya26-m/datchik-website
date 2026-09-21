@@ -206,10 +206,14 @@ const productCategories = [
         name: "Towel Warmer Controller Kit",
         href: "/products/smart-solutions/towel-warmer-controller",
       },
+      {
+        name: "Coffee Dispenser Kit",
+        href: "/products/smart-solutions/coffee-dispenser-kit",
+      },
     ],
   },
 
-  //{
+  // {
   //   name: "Body Massage",
   //   products: [
   //     {
@@ -377,7 +381,7 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
                 {/* PRODUCT CATEGORIES */}
 
-                <div className="grid grid-cols-5 gap-6">
+                <div className="grid grid-cols-4 gap-8">
 
                   {productCategories.map((category) => (
 

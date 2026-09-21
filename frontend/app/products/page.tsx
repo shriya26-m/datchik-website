@@ -9,7 +9,7 @@ const categories = [
     label: "Healthcare Electronics",
     description:
       "Practical electronic products for health, wellness and measurement applications.",
-    image: "/images/products/biomedical/orthopaedic-heat-belt.jpg",
+    image: "/images/products/biomedical/orthopaedic-heat-belt.png",
   },
 
   {
@@ -19,7 +19,7 @@ const categories = [
     label: "Safety & Monitoring",
     description:
       "LEL gas detection solutions designed for monitoring and safety applications.",
-    image: "/images/products/gas-detector/lel-display.jpg",
+    image: "/images/products/gas-detector/lel-display.jpeg",
   },
 
   {
@@ -30,21 +30,21 @@ const categories = [
     description:
       "Smart controller solutions for connected and automated electronic applications.",
     image:
-      "/images/products/smart-solutions/towel-warmer-controller.jpg",
+      "/images/products/smart-solutions/towel-warmer-controller.jpeg",
   },
+
+  // {
+  //   number: "04",
+  //   name: "Body Massage",
+  //   slug: "body-massage",
+  //   label: "Wellness Electronics",
+  //   description:
+  //     "Electronic wellness products designed for massage, comfort and personal applications.",
+  //   image: "/images/products/body-massage/body-massager.jpg",
+  // },
 
   {
     number: "04",
-    name: "Body Massage",
-    slug: "body-massage",
-    label: "Wellness Electronics",
-    description:
-      "Electronic wellness products designed for massage, comfort and personal applications.",
-    image: "/images/products/body-massage/body-massager.jpg",
-  },
-
-  {
-    number: "05",
     name: "Lighting Solutions",
     slug: "lighting",
     label: "Lighting Electronics",

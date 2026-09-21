@@ -12,7 +12,7 @@ const categories = {
       {
         name: "Orthopaedic Heat Belt",
         slug: "orthopaedic-heat-belt",
-        image: "/images/products/biomedical/orthopaedic-heat-belt.jpg",
+        image: "/images/products/biomedical/orthopaedic-heat-belt.png",
         description: "Electronic heating solution for wellness applications.",
       },
       {
@@ -45,7 +45,7 @@ const categories = {
       {
         name: "LEL Gas Detector with Display",
         slug: "lel-display",
-        image: "/images/products/gas-detector/lel-display.jpg",
+        image: "/images/products/gas-detector/lel-display.jpeg",
         description: "Gas detection solution with display functionality.",
       },
       {
@@ -70,30 +70,37 @@ const categories = {
           "/images/products/smart-solutions/towel-warmer-controller.jpg",
         description: "Smart controller for towel warmer applications.",
       },
+      {
+        name: "Coffee Dispenser Kit",
+        slug: "coffee-dispenser-kit",
+        image:
+          "/images/products/smart-solutions/coffeedisp.jpeg",
+        description: "Smart coffee dispensing solution.",
+      },
     ],
   },
 
-  "body-massage": {
-    name: "Body Massage",
-    label: "Wellness Electronics",
-    description:
-      "Electronic wellness products designed for massage and comfort applications.",
-    products: [
-      {
-        name: "Body Massager",
-        slug: "body-massager",
-        image: "/images/products/body-massage/body-massager.jpg",
-        description: "Electronic wellness product for massage applications.",
-      },
-      {
-        name: "Orthopaedic Controller Kit",
-        slug: "orthopaedic-controller",
-        image:
-          "/images/products/body-massage/orthopaedic-controller.jpg",
-        description: "Electronic controller for wellness applications.",
-      },
-    ],
-  },
+  // "body-massage": {
+  //   name: "Body Massage",
+  //   label: "Wellness Electronics",
+  //   description:
+  //     "Electronic wellness products designed for massage and comfort applications.",
+  //   products: [
+  //     {
+  //       name: "Body Massager",
+  //       slug: "body-massager",
+  //       image: "/images/products/body-massage/body-massager.jpg",
+  //       description: "Electronic wellness product for massage applications.",
+  //     },
+  //     {
+  //       name: "Orthopaedic Controller Kit",
+  //       slug: "orthopaedic-controller",
+  //       image:
+  //         "/images/products/body-massage/orthopaedic-controller.jpg",
+  //       description: "Electronic controller for wellness applications.",
+  //     },
+  //   ],
+  // },
 
   lighting: {
     name: "Lighting Solutions",
@@ -131,12 +138,12 @@ const categories = {
         image: "/images/products/lighting/ac-dc-inverter.jpg",
         description: "Power conversion solution for electronic applications.",
       },
-      {
-        name: "Decorative Lights",
-        slug: "decorative-lights",
-        image: "/images/products/lighting/decorative-lights.jpg",
-        description: "Lighting designed for decorative environments.",
-      },
+      // {
+      //   name: "Decorative Lights",
+      //   slug: "decorative-lights",
+      //   image: "/images/products/lighting/decorative-lights.jpg",
+      //   description: "Lighting designed for decorative environments.",
+      // },
       {
         name: "Concealed Light",
         slug: "concealed-light",

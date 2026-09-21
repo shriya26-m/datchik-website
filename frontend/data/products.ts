@@ -91,41 +91,49 @@ export const productCategories = [
       image:
         "/images/products/smart-solutions/towel-warmer-controller.jpg",
     },
+    {
+      slug: "coffee-dispenser-kit",
+      name: "Coffee Dispenser Kit",
+      description:
+        "A smart controller solution designed for coffee dispenser applications and automated control.",
+      image:
+        "/images/products/smart-solutions/coffeedisp.jpeg",
+    }
   ],
 },
 
-  {
-  id: "wellness",
-  number: "04",
-  label: "Wellness Electronics",
-  title: "Body Massage",
-  description:
-    "Electronic wellness products and controller solutions designed for practical massage and comfort applications.",
+//   {
+//   id: "wellness",
+//   number: "04",
+//   label: "Wellness Electronics",
+//   title: "Body Massage",
+//   description:
+//     "Electronic wellness products and controller solutions designed for practical massage and comfort applications.",
 
-  products: [
-    {
-      slug: "body-massager",
-      name: "Body Massager",
-      description:
-        "Electronic wellness equipment designed for practical massage and comfort applications.",
-      image:
-        "/images/products/body-massage/body-massager.jpg",
-    },
+//   products: [
+//     {
+//       slug: "body-massager",
+//       name: "Body Massager",
+//       description:
+//         "Electronic wellness equipment designed for practical massage and comfort applications.",
+//       image:
+//         "/images/products/body-massage/body-massager.jpg",
+//     },
 
-    {
-      slug: "orthopaedic-controller-kit",
-      name: "Orthopaedic Controller Kit",
-      description:
-        "Electronic controller solution designed for orthopaedic heating and wellness applications.",
-      image:
-        "/images/products/body-massage/orthopaedic-controller.jpg",
-    },
-  ],
-},
+//     {
+//       slug: "orthopaedic-controller-kit",
+//       name: "Orthopaedic Controller Kit",
+//       description:
+//         "Electronic controller solution designed for orthopaedic heating and wellness applications.",
+//       image:
+//         "/images/products/body-massage/orthopaedic-controller.jpg",
+//     },
+//   ],
+// },
 
   {
   id: "lighting",
-  number: "05",
+  number: "04",
   label: "Lighting Electronics",
   title: "Lighting Solutions",
   description:
