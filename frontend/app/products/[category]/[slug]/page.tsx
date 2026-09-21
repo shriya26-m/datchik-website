@@ -152,7 +152,7 @@ const products = {
     name: "Orthopaedic Controller Kit",
     category: "Body Massage",
     label: "Wellness Electronics",
-    image: "/images/products/body-massage/orthopaedic-controller.jpg",
+    image: "/images/products/body-massage/orthopaedic-controller.jpeg",
     description:
       "An electronic controller solution designed for orthopaedic wellness and comfort applications.",
     applications: [
