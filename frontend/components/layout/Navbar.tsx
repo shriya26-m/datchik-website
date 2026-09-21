@@ -250,10 +250,10 @@ const productCategories = [
         name: "AC/DC Inverter",
         href: "/products/lighting/ac-dc-inverter",
       },
-      {
-        name: "Decorative Lights",
-        href: "/products/lighting/decorative-lights",
-      },
+      // {
+      //   name: "Decorative Lights",
+      //   href: "/products/lighting/decorative-lights",
+      // },
       {
         name: "Concealed Light",
         href: "/products/lighting/concealed-light",

@@ -185,14 +185,14 @@ export const productCategories = [
       image: "/images/products/lighting/ac-dc-inverter.jpg",
     },
 
-    {
-      slug: "decorative-lights",
-      name: "Decorative Lights",
-      shortName: "Decorative",
-      description:
-        "Lighting solutions designed to enhance interiors and architectural spaces.",
-      image: "/images/products/lighting/decorative-lights.jpg",
-    },
+    // {
+    //   slug: "decorative-lights",
+    //   name: "Decorative Lights",
+    //   shortName: "Decorative",
+    //   description:
+    //     "Lighting solutions designed to enhance interiors and architectural spaces.",
+    //   image: "/images/products/lighting/decorative-lights.jpg",
+    // },
 
     {
       slug: "concealed-light",
