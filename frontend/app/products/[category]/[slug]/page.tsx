@@ -8,7 +8,7 @@ const products = {
     name: "Orthopaedic Heat Belt",
     category: "Biomedical",
     label: "Healthcare Electronics",
-    image: "/images/products/biomedical/orthopaedic-heat-belt.png",
+    image: "/images/products/biomedical/orthopaedic-heat-belt.png ",
     description:
       "A practical electronic heating solution designed for orthopaedic and wellness applications.",
     applications: [
