@@ -7,25 +7,25 @@ import { FaArrowRight } from "react-icons/fa";
 const products = [
   {
     title: "Embedded Engineering",
-    image: "/images/hero/image3.jfif",
+    image: "/images/hero/image3.jpg",
     description:
       "PCB Design, Embedded Hardware Development, Firmware Programming and Electronic Product Prototyping.",
   },
   {
     title: "Healthcare Electronics",
-    image: "/images/hero/image1.jfif",
+    image: "/images/hero/image1.jpg",
     description:
       "Innovative Orthopedic Heating Belts, Body Massagers and Medical Electronic Products.",
   },
   {
     title: "Industrial IoT Solutions",
-    image: "/images/hero/images1.jfif",
+    image: "/images/hero/image5.jpg",
     description:
       "Smart Attendance Systems, Industrial Automation, IoT Devices and Embedded Control Solutions.",
   },
   {
     title: "Lighting Solutions",
-    image: "/images/hero/images.jfif",
+    image: "/images/hero/image.png",
     description:
       "Energy-efficient LED Bulbs, Panel Lights, Tube Lights, Commercial Lighting and Decorative Lighting Solutions.",
   },
