@@ -16,7 +16,7 @@ export const productCategories = [
         description:
           "A practical electronic heating solution designed for targeted warmth and comfort applications.",
         image:
-          "/images/products/biomedical/orthopaedic-heat-belt.jpg",
+          "/images/products/biomedical/orthopaedic-heat-belt.png",
       },
 
       {

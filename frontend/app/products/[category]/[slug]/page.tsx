@@ -131,37 +131,37 @@ const products = {
     ],
   },
 
-  "body-massage/body-massager": {
-    number: "02",
-    name: "Body Massager",
-    category: "Body Massage",
-    label: "Wellness Electronics",
-    image: "/images/products/body-massage/body-massager.jpg",
-    description:
-      "An electronic wellness product designed for practical massage and comfort applications.",
-    applications: [
-      "Personal wellness",
-      "Massage applications",
-      "Home use",
-      "Comfort applications",
-    ],
-  },
+  // "body-massage/body-massager": {
+  //   number: "02",
+  //   name: "Body Massager",
+  //   category: "Body Massage",
+  //   label: "Wellness Electronics",
+  //   image: "/images/products/body-massage/body-massager.jpg",
+  //   description:
+  //     "An electronic wellness product designed for practical massage and comfort applications.",
+  //   applications: [
+  //     "Personal wellness",
+  //     "Massage applications",
+  //     "Home use",
+  //     "Comfort applications",
+  //   ],
+  // },
 
-  "body-massage/orthopaedic-controller": {
-    number: "02",
-    name: "Orthopaedic Controller Kit",
-    category: "Body Massage",
-    label: "Wellness Electronics",
-    image: "/images/products/body-massage/orthopaedic-controller.png",
-    description:
-      "An electronic controller solution designed for orthopaedic wellness and comfort applications.",
-    applications: [
-      "Orthopaedic applications",
-      "Wellness electronics",
-      "Controller systems",
-      "Personal use",
-    ],
-  },
+  // "body-massage/orthopaedic-controller": {
+  //   number: "02",
+  //   name: "Orthopaedic Controller Kit",
+  //   category: "Body Massage",
+  //   label: "Wellness Electronics",
+  //   image: "/images/products/body-massage/orthopaedic-controller.png",
+  //   description:
+  //     "An electronic controller solution designed for orthopaedic wellness and comfort applications.",
+  //   applications: [
+  //     "Orthopaedic applications",
+  //     "Wellness electronics",
+  //     "Controller systems",
+  //     "Personal use",
+  //   ],
+  // },
 
   "lighting/panel-light": {
     number: "01",
