@@ -54,12 +54,12 @@ export default function Industries() {
                   <div className="flex items-center gap-8">
                     <span className="text-5xl font-bold text-slate-300 transition group-hover:text-white">
                       {industry.number}
-                    </span>
+                    </span>   
 
                     <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 text-blue-500 transition group-hover:bg-white group-hover:text-blue-600">
                       <Icon size={30} />
                     </div>
-
+ 
                     <div>
                       <h3 className="text-2xl font-bold text-slate-900 transition group-hover:text-white">
                         {industry.title}

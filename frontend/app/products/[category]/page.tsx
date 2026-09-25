@@ -3,156 +3,260 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const categories = {
+  /* =====================================================
+     BIOMEDICAL
+  ====================================================== */
+
   biomedical: {
     name: "Biomedical",
     label: "Healthcare Electronics",
     description:
       "Electronic products designed for practical health, wellness and measurement applications.",
+
     products: [
       {
         name: "Orthopaedic Heat Belt",
         slug: "orthopaedic-heat-belt",
-        image: "/images/products/biomedical/orthopaedic-heat-belt.png",
-        description: "Electronic heating solution for wellness applications.",
+        image: "/images/products/biomedical/heat-belt.png",
+        description:
+          "Electronic heating solution for wellness applications.",
       },
       {
         name: "BP Monitor",
         slug: "bp-monitor",
         image: "/images/products/biomedical/bp-monitor.jpg",
-        description: "Electronic blood pressure monitoring solution.",
+        description:
+          "Electronic blood pressure monitoring solution.",
       },
       {
         name: "Thermometer",
         slug: "thermometer",
         image: "/images/products/biomedical/thermometer.jpg",
-        description: "Compact electronic temperature measurement solution.",
+        description:
+          "Compact electronic temperature measurement solution.",
       },
       {
         name: "IR Meter",
         slug: "ir-meter",
         image: "/images/products/biomedical/ir-meter.jpg",
-        description: "Infrared-based electronic measurement solution.",
+        description:
+          "Infrared-based electronic measurement solution.",
+      },
+      {
+        name: "Body Massager",
+        slug: "body-massager",
+        image: "/images/products/body-massage/body-massager.png",
+        description:
+          "Electronic wellness product for massage applications.",
       },
     ],
   },
+
+  /* =====================================================
+     GAS DETECTION
+  ====================================================== */
 
   "gas-detector": {
     name: "Gas Detection",
     label: "Safety & Monitoring",
     description:
       "LEL gas detection products designed for gas monitoring and safety applications.",
+
     products: [
       {
         name: "LEL Gas Detector with Display",
         slug: "lel-display",
         image: "/images/products/gas-detector/lel-display.jpeg",
-        description: "Gas detection solution with display functionality.",
+        description:
+          "Gas detection solution with display functionality.",
       },
       {
         name: "LEL Gas Detector without Display",
         slug: "lel-no-display",
         image: "/images/products/gas-detector/lel-no-display.jpg",
-        description: "Compact LEL gas detection solution.",
+        description:
+          "Compact LEL gas detection solution.",
       },
     ],
   },
+
+  /* =====================================================
+     SMART SOLUTIONS
+  ====================================================== */
 
   "smart-solutions": {
     name: "Datchik Smart Solutions",
     label: "Smart Electronics",
     description:
       "Smart controller solutions developed for connected and automated applications.",
+
     products: [
+      /* -------------------------------------------------
+         01. TOWEL WARMER
+      -------------------------------------------------- */
+
       {
         name: "Towel Warmer Controller Kit",
         slug: "towel-warmer-controller",
         image:
-          "/images/products/smart-solutions/towel-warmer-controller.jpg",
-        description: "Smart controller for towel warmer applications.",
+          "/images/products/smart-solutions/towel-warmer-controller.jpeg",
+        description:
+          "Smart controller for towel warmer applications.",
       },
+
+      /* -------------------------------------------------
+         02. COFFEE DISPENSER
+      -------------------------------------------------- */
+
       {
-        name: "Coffee Dispenser Kit",
+        name: "Coffee Dispenser Controller Kit",
         slug: "coffee-dispenser-kit",
         image:
           "/images/products/smart-solutions/coffeedisp.jpeg",
-        description: "Smart coffee dispensing solution.",
+        description:
+          "Smart controller solution for coffee dispensing applications.",
+      },
+
+      /* -------------------------------------------------
+         03. AC SINGLE POWER LED
+      -------------------------------------------------- */
+
+      {
+        name: "AC Orthopaedic Controller Kit - Single Power LED",
+        slug: "ac-orthopaedic-kit",
+        image:
+          "/images/products/smart-solutions/ac-single-power-led.jpeg",
+        description:
+          "AC orthopaedic controller kit with single power LED indication.",
+      },
+
+      /* -------------------------------------------------
+         04. AC 3 STATUS LEDS
+      -------------------------------------------------- */
+
+      {
+        name: "AC Orthopaedic Controller Kit - 3 Status LEDs",
+        slug: "ac-orthopaedic-kit-status",
+        image:
+          "/images/products/smart-solutions/ac-3-status-led.jpeg",
+        description:
+          "AC orthopaedic controller kit with three status LED indicators.",
+      },
+
+      /* -------------------------------------------------
+         05. AC 3 VOLTAGE LEDS
+      -------------------------------------------------- */
+
+      {
+        name: "AC Orthopaedic Controller Kit - 3 AC Voltage LEDs",
+        slug: "ac-orthopaedic-kit-voltage",
+        image:
+          "/images/products/smart-solutions/1led-3ac-volt.jpeg",
+        description:
+          "AC orthopaedic controller kit with three AC voltage LED indicators.",
+      },
+
+      /* -------------------------------------------------
+         06. DC ORTHOPAEDIC
+      -------------------------------------------------- */
+
+      {
+        name: "DC Orthopaedic Controller Kit - 3 DC Level Status LEDs",
+        slug: "dc-orthopaedic-kit",
+        image:
+          "/images/products/smart-solutions/DC Orthopaedic controller kit ( 1 power led + 3 different dc level status led).png",
+        description:
+          "DC orthopaedic controller kit with three DC level status LED indicators.",
+      },
+
+      /* -------------------------------------------------
+         07. AC ORTHOPADIC PCB
+      -------------------------------------------------- */
+
+      {
+        name: "AC Orthopaedic Kit - Single LED PCB",
+        slug: "orthopadic-kit",
+        image:
+          "/images/products/smart-solutions/AC Orthopadic kit( in PCB  single led ).jpeg",
+        description:
+          "AC orthopaedic controller kit with a single LED PCB indication.",
+      },
+
+      /* -------------------------------------------------
+         08. BODY MASSAGER CONTROLLER
+      -------------------------------------------------- */
+
+      {
+        name: "Body Massager Controller Kit",
+        slug: "body-massager-kit",
+        image:
+          "/images/products/smart-solutions/Body massager controller kit.jpeg",
+        description:
+          "Electronic controller kit designed for body massager applications.",
       },
     ],
   },
 
-  // "body-massage": {
-  //   name: "Body Massage",
-  //   label: "Wellness Electronics",
-  //   description:
-  //     "Electronic wellness products designed for massage and comfort applications.",
-  //   products: [
-  //     {
-  //       name: "Body Massager",
-  //       slug: "body-massager",
-  //       image: "/images/products/body-massage/body-massager.jpg",
-  //       description: "Electronic wellness product for massage applications.",
-  //     },
-  //     {
-  //       name: "Orthopaedic Controller Kit",
-  //       slug: "orthopaedic-controller",
-  //       image:
-  //         "/images/products/body-massage/orthopaedic-controller.jpg",
-  //       description: "Electronic controller for wellness applications.",
-  //     },
-  //   ],
-  // },
+  /* =====================================================
+     LIGHTING
+  ====================================================== */
 
   lighting: {
     name: "Lighting Solutions",
     label: "Lighting Electronics",
     description:
       "Modern lighting solutions for residential, commercial, industrial and architectural applications.",
+
     products: [
       {
         name: "Panel Light",
         slug: "panel-light",
         image: "/images/products/lighting/panel-light.jpg",
-        description: "Modern indoor lighting solution.",
+        description:
+          "Modern indoor lighting solution.",
       },
       {
         name: "Floodlight",
         slug: "flood-light",
         image: "/images/products/lighting/floodlight.png",
-        description: "High-output outdoor lighting solution.",
+        description:
+          "High-output outdoor lighting solution.",
       },
       {
         name: "Streetlight",
         slug: "street-light",
         image: "/images/products/lighting/street-light.jpg",
-        description: "Lighting solution for roads and outdoor infrastructure.",
+        description:
+          "Lighting solution for roads and outdoor infrastructure.",
       },
       {
         name: "LED Bulb",
         slug: "led-bulb",
         image: "/images/products/lighting/led-bulb.jpg",
-        description: "LED lighting available from 0W to 15W.",
+        description:
+          "LED lighting available from 0W to 15W.",
       },
       {
         name: "AC/DC Inverter",
         slug: "ac-dc-inverter",
         image: "/images/products/lighting/ac-dc-inverter.jpg",
-        description: "Power conversion solution for electronic applications.",
+        description:
+          "Power conversion solution for electronic applications.",
       },
-      // {
-      //   name: "Decorative Lights",
-      //   slug: "decorative-lights",
-      //   image: "/images/products/lighting/decorative-lights.jpg",
-      //   description: "Lighting designed for decorative environments.",
-      // },
       {
         name: "Concealed Light",
         slug: "concealed-light",
         image: "/images/products/lighting/concealed-light.jpg",
-        description: "Minimal architectural lighting solution.",
+        description:
+          "Minimal architectural lighting solution.",
       },
     ],
   },
 };
+
+/* =====================================================
+   STATIC PARAMS
+====================================================== */
 
 export function generateStaticParams() {
   return Object.keys(categories).map((category) => ({
@@ -160,10 +264,16 @@ export function generateStaticParams() {
   }));
 }
 
+/* =====================================================
+   CATEGORY PAGE
+====================================================== */
+
 export default async function CategoryPage({
   params,
 }: {
-  params: Promise<{ category: string }>;
+  params: Promise<{
+    category: string;
+  }>;
 }) {
   const { category } = await params;
 
@@ -177,10 +287,11 @@ export default async function CategoryPage({
   return (
     <main className="min-h-screen bg-white text-[#061426]">
 
-      {/* HERO */}
+      {/* =================================================
+          HERO
+      ================================================== */}
 
       <section className="bg-[#061426] px-6 pb-20 pt-36 text-white lg:px-12">
-
         <div className="mx-auto max-w-7xl">
 
           <Link
@@ -205,17 +316,18 @@ export default async function CategoryPage({
             </p>
 
           </div>
-
         </div>
-
       </section>
 
-
-      {/* PRODUCTS */}
+      {/* =================================================
+          PRODUCTS
+      ================================================== */}
 
       <section className="px-6 py-24 lg:px-12">
 
         <div className="mx-auto max-w-7xl">
+
+          {/* HEADER */}
 
           <div className="mb-14 flex items-end justify-between">
 
@@ -237,33 +349,42 @@ export default async function CategoryPage({
 
           </div>
 
-
-          {/* PRODUCT GRID */}
+          {/* =================================================
+              PRODUCT GRID
+          ================================================== */}
 
           <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
 
             {data.products.map((product, index) => (
 
+              
+
               <Link
-                key={product.slug}
+                key={`${category}-${product.slug}`}
                 href={`/products/${category}/${product.slug}`}
                 className="group"
               >
 
                 {/* IMAGE */}
 
-              <div className="relative h-[580px] overflow-hidden rounded-[28px] bg-slate-100 sm:h-[420px] lg:h-[450px]">
-  <Image
-    src={product.image}
-    alt={product.name}
-    fill
-    className="object-contain scale-110 transition duration-700 group-hover:scale-115"
-  />
+                <div className="relative h-[580px] overflow-hidden rounded-[28px] bg-slate-100 sm:h-[420px] lg:h-[450px]">
 
-  <div className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold backdrop-blur">
-    {String(index + 1).padStart(2, "0")}
-  </div>
-</div>
+                 <Image
+  src={product.image}
+  alt={product.name}
+  fill
+  unoptimized
+  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+  className="object-contain scale-110 transition duration-700 group-hover:scale-115"
+/>
+
+                  {/* NUMBER */}
+
+                  <div className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold backdrop-blur">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                </div>
 
                 {/* TEXT */}
 
@@ -305,8 +426,9 @@ export default async function CategoryPage({
 
       </section>
 
-
-      {/* CTA */}
+      {/* =================================================
+          CTA
+      ================================================== */}
 
       <section className="px-6 pb-24 lg:px-12">
 

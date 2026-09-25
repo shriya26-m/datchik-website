@@ -49,20 +49,36 @@ export default function About() {
             <div className="relative h-[650px] overflow-hidden rounded-3xl shadow-2xl bg-white">
               <div className="animate-scroll-y flex flex-col gap-4 p-4">
                 {[
-                  "/images/about/expo.jpg",
-                  "/images/about/team1.jpg",
-                  // "/images/about/products.jpg",
-                  // "/images/about/tradeshow.jpg",
-                  // "/images/about/company.png",
+                  // "/images/about/expo.jpg",
+                  
+                  "/images/about/lel-display.jpeg",
+                  "/images/about/heat-belt.png",
+                  "/images/about/heatbelt.jpeg",
+                  "/images/about/dc-ortho-kit.jpeg",
+                  "/images/about/acortho-1led.jpeg",
+
+                  
 
                   // Duplicate for infinite loop
-                  "/images/about/expo.jpg",
-                  "/images/about/team1.jpg",
-                  // "/images/about/products.jpg",
+
+
+                  // "/images/about/expo.jpg",
+                  // "/images/about/team1.jpg",
+                  "/images/about/lel-display.jpeg",
+                  "/images/about/heat-belt.png",
+                  "/images/about/heatbelt.jpeg",
+                  "/images/about/dc-ortho-kit.jpeg",
+                  "/images/about/acortho-1led.jpeg",
+
+                  // "/images/about/expo.jpg",
+                  // "/images/about/team1.jpg",
+                  // ,
                   //
 
                   // "/images/about/lab.jpg",
                   // "/images/about/company.png",
+
+
                 ].map((img, index) => (
                   <Image
                     key={index}

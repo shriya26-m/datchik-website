@@ -3,12 +3,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const products = {
+  /* =====================================================
+     BIOMEDICAL
+  ====================================================== */
+
   "biomedical/orthopaedic-heat-belt": {
     number: "01",
     name: "Orthopaedic Heat Belt",
     category: "Biomedical",
     label: "Healthcare Electronics",
-    image: "/images/products/biomedical/orthopaedic-heat-belt.png ",
+    image: "/images/products/biomedical/heat-belt.png",
     description:
       "A practical electronic heating solution designed for orthopaedic and wellness applications.",
     applications: [
@@ -67,6 +71,30 @@ const products = {
     ],
   },
 
+  /* =====================================================
+     BODY MASSAGE
+  ====================================================== */
+
+  "body-massage/body-massager": {
+    number: "01",
+    name: "Body Massager",
+    category: "Body Massage",
+    label: "Wellness Electronics",
+    image: "/images/products/body-massage/body-massager.png",
+    description:
+      "An electronic wellness product designed for practical massage and comfort applications.",
+    applications: [
+      "Personal wellness",
+      "Massage applications",
+      "Home use",
+      "Comfort applications",
+    ],
+  },
+
+  /* =====================================================
+     GAS DETECTION
+  ====================================================== */
+
   "gas-detector/lel-display": {
     number: "01",
     name: "LEL Gas Detector with Display",
@@ -99,12 +127,17 @@ const products = {
     ],
   },
 
+  /* =====================================================
+     SMART SOLUTIONS
+  ====================================================== */
+
   "smart-solutions/towel-warmer-controller": {
     number: "01",
     name: "Towel Warmer Controller Kit",
     category: "Smart Solutions",
     label: "Smart Electronics",
-    image: "/images/products/smart-solutions/towel-warmer-controller.jpeg",
+    image:
+      "/images/products/smart-solutions/towel-warmer-controller.jpeg",
     description:
       "A smart controller solution developed for towel warmer and connected electronic applications.",
     applications: [
@@ -120,7 +153,8 @@ const products = {
     name: "Coffee Dispenser Controller Kit",
     category: "Smart Solutions",
     label: "Smart Electronics",
-    image: "/images/products/smart-solutions/coffeedisp.jpeg",
+    image:
+      "/images/products/smart-solutions/coffeedisp.jpeg",
     description:
       "A controller kit designed for coffee dispensing applications, providing reliable electronic control for automated coffee dispensing systems.",
     applications: [
@@ -131,37 +165,116 @@ const products = {
     ],
   },
 
-  // "body-massage/body-massager": {
-  //   number: "02",
-  //   name: "Body Massager",
-  //   category: "Body Massage",
-  //   label: "Wellness Electronics",
-  //   image: "/images/products/body-massage/body-massager.jpg",
-  //   description:
-  //     "An electronic wellness product designed for practical massage and comfort applications.",
-  //   applications: [
-  //     "Personal wellness",
-  //     "Massage applications",
-  //     "Home use",
-  //     "Comfort applications",
-  //   ],
-  // },
+  /* =====================================================
+     CONTROLLER KITS
+  ====================================================== */
 
-  // "body-massage/orthopaedic-controller": {
-  //   number: "02",
-  //   name: "Orthopaedic Controller Kit",
-  //   category: "Body Massage",
-  //   label: "Wellness Electronics",
-  //   image: "/images/products/body-massage/orthopaedic-controller.png",
-  //   description:
-  //     "An electronic controller solution designed for orthopaedic wellness and comfort applications.",
-  //   applications: [
-  //     "Orthopaedic applications",
-  //     "Wellness electronics",
-  //     "Controller systems",
-  //     "Personal use",
-  //   ],
-  // },
+  "smart-solutions/ac-orthopaedic-kit": {
+    number: "03",
+    name: "AC Orthopaedic Controller Kit - Single Power LED",
+    category: "Smart Solutions",
+    label: "Controller Kits",
+    image:
+      "/images/products/smart-solutions/ac-single-power-led.jpeg",
+    description:
+      "An AC orthopaedic controller kit designed for electronic control applications with single power LED indication.",
+    applications: [
+      "Orthopaedic equipment",
+      "Electronic control systems",
+      "Wellness equipment",
+      "AC-powered applications",
+    ],
+  },
+
+  "smart-solutions/ac-orthopaedic-kit-status": {
+    number: "04",
+    name: "AC Orthopaedic Controller Kit - 3 Status LEDs",
+    category: "Smart Solutions",
+    label: "Controller Kits",
+    image:
+      "/images/products/smart-solutions/ac-3-status-led.jpeg",
+    description:
+      "An AC orthopaedic controller kit featuring three status LED indicators for clear operating-state indication.",
+    applications: [
+      "Orthopaedic equipment",
+      "Status indication",
+      "Electronic control systems",
+      "Wellness equipment",
+    ],
+  },
+
+  "smart-solutions/ac-orthopaedic-kit-voltage": {
+    number: "05",
+    name: "AC Orthopaedic Controller Kit - 3 AC Voltage LEDs",
+    category: "Smart Solutions",
+    label: "Controller Kits",
+    image:
+      "/images/products/smart-solutions/1led-3ac-volt.jpeg",
+    description:
+      "An AC orthopaedic controller kit with three AC voltage LED indicators designed for voltage status indication.",
+    applications: [
+      "Orthopaedic equipment",
+      "AC voltage indication",
+      "Electronic control",
+      "Wellness equipment",
+    ],
+  },
+
+  "smart-solutions/dc-orthopaedic-kit": {
+    number: "06",
+    name: "DC Orthopaedic Controller Kit - 3 DC Level Status LEDs",
+    category: "Smart Solutions",
+    label: "Controller Kits",
+    image:
+      "/images/products/smart-solutions/DC Orthopaedic controller kit ( 1 power led + 3 different dc level status led).png",
+    description:
+      "A DC orthopaedic controller kit featuring three DC level status LED indicators for electronic control applications.",
+    applications: [
+      "Orthopaedic equipment",
+      "DC-powered applications",
+      "Level status indication",
+      "Electronic control systems",
+    ],
+  },
+
+  "smart-solutions/orthopadic-kit": {
+    number: "07",
+    name: "AC Orthopaedic Kit - Single LED PCB",
+    category: "Smart Solutions",
+    label: "Controller Kits",
+    image:
+      "/images/products/smart-solutions/AC Orthopadic kit( in PCB  single led ).jpeg",
+    description:
+      "An AC orthopaedic controller solution featuring a single LED PCB for indication and electronic control applications.",
+    applications: [
+      "Orthopaedic equipment",
+      "Electronic control",
+      "LED indication",
+      "Wellness equipment",
+    ],
+  },
+
+  "smart-solutions/body-massager-kit": {
+    number: "08",
+    name: "Body Massager Controller Kit",
+    category: "Smart Solutions",
+    label: "Controller Kits",
+    image:
+      "/images/products/smart-solutions/Body massager controller kit.jpeg",
+    description:
+      "An electronic controller kit designed for body massager applications and wellness equipment.",
+    applications: [
+      "Body massager systems",
+      "Wellness equipment",
+      "Electronic control",
+      "Personal wellness applications",
+    ],
+  },
+
+ 
+  /* =====================================================
+     LIGHTING
+  ====================================================== */
 
   "lighting/panel-light": {
     number: "01",
@@ -248,7 +361,8 @@ const products = {
     name: "Concealed Light",
     category: "Lighting",
     label: "Architectural Lighting",
-    image: "/images/products/lighting/concealedlight.png",
+    image:
+      "/images/products/lighting/concealedlight.png",
     description:
       "Minimal architectural lighting designed for modern interior applications.",
     applications: [
@@ -259,6 +373,10 @@ const products = {
     ],
   },
 };
+
+/* =====================================================
+   STATIC PARAMS
+====================================================== */
 
 export function generateStaticParams() {
   return Object.keys(products).map((key) => {
@@ -271,6 +389,10 @@ export function generateStaticParams() {
   });
 }
 
+/* =====================================================
+   PRODUCT DETAIL PAGE
+====================================================== */
+
 export default async function ProductDetailPage({
   params,
 }: {
@@ -281,7 +403,8 @@ export default async function ProductDetailPage({
 }) {
   const { category, slug } = await params;
 
-  const product = products[`${category}/${slug}` as keyof typeof products];
+  const product =
+    products[`${category}/${slug}` as keyof typeof products];
 
   if (!product) {
     notFound();
@@ -289,18 +412,27 @@ export default async function ProductDetailPage({
 
   return (
     <main className="min-h-screen bg-white text-[#061426]">
-      {/* ================= HERO ================= */}
+
+      {/* =================================================
+          HERO
+      ================================================== */}
 
       <section className="relative overflow-hidden bg-[#061426] text-white">
+
         {/* Background glow */}
 
         <div className="pointer-events-none absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-[130px]" />
 
         <div className="mx-auto max-w-7xl px-6 pb-20 pt-32 lg:px-12">
+
           {/* Breadcrumb */}
 
-          <div className="flex items-center gap-3 text-sm text-slate-500">
-            <Link href="/products" className="transition hover:text-cyan-400">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500">
+
+            <Link
+              href="/products"
+              className="transition hover:text-cyan-400"
+            >
               Products
             </Link>
 
@@ -315,19 +447,28 @@ export default async function ProductDetailPage({
 
             <span>/</span>
 
-            <span className="text-slate-300">{product.name}</span>
+            <span className="text-slate-300">
+              {product.name}
+            </span>
+
           </div>
 
           {/* Main hero */}
 
           <div className="mt-14 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-            {/* IMAGE */}
+
+            {/* =================================================
+                PRODUCT IMAGE
+            ================================================== */}
 
             <div className="group relative">
+
               <div className="absolute -inset-4 rounded-[40px] bg-cyan-400/5 blur-2xl transition duration-700 group-hover:bg-cyan-400/10" />
 
               <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#0b1d32]">
+
                 <div className="relative aspect-[4/3]">
+
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -336,11 +477,13 @@ export default async function ProductDetailPage({
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-contain p-10 transition duration-700 ease-out group-hover:scale-105 md:p-16"
                   />
+
                 </div>
 
                 {/* Product number */}
 
                 <div className="absolute left-6 top-6 flex items-center gap-3">
+
                   <span className="text-xs tracking-[0.25em] text-slate-500">
                     PRODUCT
                   </span>
@@ -348,19 +491,27 @@ export default async function ProductDetailPage({
                   <span className="text-sm font-semibold text-cyan-400">
                     {product.number}
                   </span>
+
                 </div>
+
               </div>
+
             </div>
 
-            {/* CONTENT */}
+            {/* =================================================
+                PRODUCT CONTENT
+            ================================================== */}
 
             <div>
+
               <div className="flex items-center gap-4">
+
                 <span className="h-px w-10 bg-cyan-400" />
 
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-400">
                   {product.label}
                 </p>
+
               </div>
 
               <h1 className="mt-7 max-w-2xl text-5xl font-semibold leading-[1.05] md:text-6xl lg:text-7xl">
@@ -374,11 +525,15 @@ export default async function ProductDetailPage({
               {/* Buttons */}
 
               <div className="mt-10 flex flex-wrap gap-4">
+
                 <Link
-                  href={`/contact?product=${encodeURIComponent(product.name)}`}
+                  href={`/contact?product=${encodeURIComponent(
+                    product.name
+                  )}`}
                   className="group inline-flex items-center gap-3 rounded-full bg-cyan-400 px-7 py-4 text-sm font-semibold text-[#061426] transition hover:bg-white"
                 >
                   Send Product Enquiry
+
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
@@ -390,31 +545,45 @@ export default async function ProductDetailPage({
                 >
                   Back to Collection
                 </Link>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* ================= PRODUCT INTRO ================= */}
+      {/* =================================================
+          PRODUCT OVERVIEW
+      ================================================== */}
 
       <section className="px-6 py-24 lg:px-12">
+
         <div className="mx-auto max-w-7xl">
+
           <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
+
             <div>
+
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600">
                 Product Overview
               </p>
 
               <h2 className="mt-5 text-4xl font-semibold leading-tight md:text-5xl">
                 Built for
+
                 <span className="block text-slate-400">
                   practical applications.
                 </span>
               </h2>
+
             </div>
 
             <div>
+
               <p className="max-w-3xl text-xl leading-9 text-slate-600">
                 {product.description}
               </p>
@@ -422,7 +591,9 @@ export default async function ProductDetailPage({
               <div className="mt-10 h-px w-full bg-slate-200" />
 
               <div className="mt-7 flex flex-wrap gap-x-12 gap-y-4 text-sm text-slate-500">
+
                 <div>
+
                   <span className="block text-xs uppercase tracking-widest text-slate-400">
                     Category
                   </span>
@@ -430,9 +601,11 @@ export default async function ProductDetailPage({
                   <span className="mt-2 block font-medium text-[#061426]">
                     {product.category}
                   </span>
+
                 </div>
 
                 <div>
+
                   <span className="block text-xs uppercase tracking-widest text-slate-400">
                     Manufacturer
                   </span>
@@ -440,86 +613,140 @@ export default async function ProductDetailPage({
                   <span className="mt-2 block font-medium text-[#061426]">
                     Datchik Electronics
                   </span>
+
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* ================= APPLICATIONS ================= */}
+      {/* =================================================
+          APPLICATIONS
+      ================================================== */}
 
       <section className="border-y border-slate-200 bg-slate-50 px-6 py-24 lg:px-12">
+
         <div className="mx-auto max-w-7xl">
+
           <div className="grid gap-14 lg:grid-cols-[0.75fr_1.25fr]">
+
             <div>
+
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600">
                 Applications
               </p>
 
               <h2 className="mt-5 text-4xl font-semibold md:text-5xl">
                 Where it
-                <span className="block text-slate-400">fits.</span>
+
+                <span className="block text-slate-400">
+                  fits.
+                </span>
               </h2>
+
             </div>
 
             <div className="border-t border-slate-300">
-              {product.applications.map((application, index) => (
-                <div
-                  key={application}
-                  className="group flex items-center justify-between border-b border-slate-300 py-7 transition hover:px-3"
-                >
-                  <div className="flex items-center gap-7">
-                    <span className="text-xs font-semibold text-slate-400">
-                      {String(index + 1).padStart(2, "0")}
+
+              {product.applications.map(
+                (application, index) => (
+
+                  <div
+                    key={`${product.number}-${index}-${application}`}
+                    className="group flex items-center justify-between border-b border-slate-300 py-7 transition hover:px-3"
+                  >
+
+                    <div className="flex items-center gap-7">
+
+                      <span className="text-xs font-semibold text-slate-400">
+                        {String(index + 1).padStart(
+                          2,
+                          "0"
+                        )}
+                      </span>
+
+                      <span className="text-xl font-medium">
+                        {application}
+                      </span>
+
+                    </div>
+
+                    <span className="text-xl text-slate-300 transition group-hover:translate-x-1 group-hover:text-blue-600">
+                      →
                     </span>
 
-                    <span className="text-xl font-medium">{application}</span>
                   </div>
 
-                  <span className="text-xl text-slate-300 transition group-hover:translate-x-1 group-hover:text-blue-600">
-                    →
-                  </span>
-                </div>
-              ))}
+                )
+              )}
+
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* ================= ENQUIRY CTA ================= */}
+      {/* =================================================
+          ENQUIRY CTA
+      ================================================== */}
 
       <section className="px-6 py-24 lg:px-12">
+
         <div className="mx-auto max-w-7xl">
+
           <div className="relative overflow-hidden rounded-[36px] bg-[#061426] px-8 py-16 md:px-16 md:py-20">
+
             <div className="pointer-events-none absolute -right-32 -top-32 h-[450px] w-[450px] rounded-full bg-cyan-400/10 blur-[120px]" />
 
             <div className="relative max-w-3xl">
+
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-400">
                 Product Enquiry
               </p>
 
               <h2 className="mt-6 text-4xl font-semibold leading-tight text-white md:text-6xl">
+
                 Interested in
-                <span className="block text-cyan-400">{product.name}?</span>
+
+                <span className="block text-cyan-400">
+                  {product.name}?
+                </span>
+
               </h2>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-                Have a requirement or want to know more about this product? Get
-                in touch with the Datchik Electronics team.
+                Have a requirement or want to know more about this
+                product? Get in touch with the Datchik Electronics
+                team.
               </p>
 
               <Link
-                href={`/contact?product=${encodeURIComponent(product.name)}`}
+                href={`/contact?product=${encodeURIComponent(
+                  product.name
+                )}`}
                 className="mt-9 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#061426] transition hover:bg-cyan-400"
               >
                 Discuss Your Requirement
+
                 <span>→</span>
               </Link>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
+
     </main>
   );
 }
