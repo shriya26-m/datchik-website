@@ -74,7 +74,7 @@ const productCategories = [
       },
       {
         name: "Body Massager",
-        href: "/products/body-massage/body-massager",
+        href: "/products/biomedical/body-massager",
       },
     ],
   },

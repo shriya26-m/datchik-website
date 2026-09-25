@@ -45,7 +45,7 @@ const categories = {
       {
         name: "Body Massager",
         slug: "body-massager",
-        image: "/images/products/body-massage/body-massager.png",
+        image: "/images/products/biomedical/body-massager.jpeg",
         description:
           "Electronic wellness product for massage applications.",
       },

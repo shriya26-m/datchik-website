@@ -80,7 +80,7 @@ const products = {
     name: "Body Massager",
     category: "Body Massage",
     label: "Wellness Electronics",
-    image: "/images/products/body-massage/body-massager.png",
+    image: "/images/products/biomedical/body-massager.jpeg",
     description:
       "An electronic wellness product designed for practical massage and comfort applications.",
     applications: [
