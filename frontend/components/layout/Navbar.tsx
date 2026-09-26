@@ -17,10 +17,10 @@ const navLinks = [
 ];
 
 /* =========================================================
-   CONTROLLER KITS
+   AC ORTHOPAEDIC KIT - 4 PRODUCTS
 ========================================================= */
 
-const controllerKits = [
+const acOrthopaedicKits = [
   {
     name: "AC Orthopaedic Controller Kit - Single Power LED",
     href: "/products/smart-solutions/ac-orthopaedic-kit",
@@ -34,15 +34,30 @@ const controllerKits = [
     href: "/products/smart-solutions/ac-orthopaedic-kit-voltage",
   },
   {
-    name: "DC Orthopaedic Controller Kit - 3 DC Level Status LEDs",
-    href: "/products/smart-solutions/dc-orthopaedic-kit",
-  },
-  {
     name: "AC Orthopaedic Kit - Single LED PCB",
     href: "/products/smart-solutions/orthopadic-kit",
   },
+];
+
+/* =========================================================
+   SMART SOLUTIONS PRODUCTS
+========================================================= */
+
+const smartSolutionProducts = [
   {
-    name: "Body Massager Controller Kit",
+    name: "DC Orthopaedic Kit",
+    href: "/products/smart-solutions/dc-orthopaedic-kit",
+  },
+  {
+    name: "Towel Warmer Controller",
+    href: "/products/smart-solutions/towel-warmer-controller",
+  },
+  {
+    name: "Coffee Dispenser Controller",
+    href: "/products/smart-solutions/coffee-dispenser-kit",
+  },
+  {
+    name: "Body Massager Controller",
     href: "/products/smart-solutions/body-massager-kit",
   },
 ];
@@ -72,10 +87,6 @@ const productCategories = [
         name: "IR Meter",
         href: "/products/biomedical/ir-meter",
       },
-      {
-        name: "Body Massager",
-        href: "/products/biomedical/body-massager",
-      },
     ],
   },
 
@@ -90,21 +101,6 @@ const productCategories = [
       {
         name: "LEL Gas Detector without Display",
         href: "/products/gas-detector/lel-no-display",
-      },
-    ],
-  },
-
-  {
-    name: "Smart Solutions",
-
-    products: [
-      {
-        name: "Towel Warmer Controller Kit",
-        href: "/products/smart-solutions/towel-warmer-controller",
-      },
-      {
-        name: "Coffee Dispenser Kit",
-        href: "/products/smart-solutions/coffee-dispenser-kit",
       },
     ],
   },
@@ -178,6 +174,10 @@ const serviceCategories = [
 ========================================================= */
 
 export default function Navbar() {
+  /* =======================================================
+     MOBILE STATES
+  ======================================================= */
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [mobileProductsOpen, setMobileProductsOpen] =
@@ -186,21 +186,21 @@ export default function Navbar() {
   const [mobileSmartSolutionsOpen, setMobileSmartSolutionsOpen] =
     useState(false);
 
-  const [mobileControllerKitsOpen, setMobileControllerKitsOpen] =
+  const [mobileACOrthopaedicOpen, setMobileACOrthopaedicOpen] =
     useState(false);
 
   const [mobileServicesOpen, setMobileServicesOpen] =
     useState(false);
 
-  /* =========================================================
+  /* =======================================================
      CLOSE MOBILE MENU
-  ========================================================= */
+  ======================================================= */
 
   const closeMenu = () => {
     setMenuOpen(false);
     setMobileProductsOpen(false);
     setMobileSmartSolutionsOpen(false);
-    setMobileControllerKitsOpen(false);
+    setMobileACOrthopaedicOpen(false);
     setMobileServicesOpen(false);
   };
 
@@ -208,9 +208,9 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <Container className="flex h-18 items-center justify-between">
 
-        {/* =====================================================
+        {/* =================================================
             LOGO
-        ====================================================== */}
+        ================================================== */}
 
         <Link href="/" onClick={closeMenu}>
           <Image
@@ -224,9 +224,9 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* =====================================================
+        {/* =================================================
             DESKTOP NAVIGATION
-        ====================================================== */}
+        ================================================== */}
 
         <nav className="hidden items-center gap-2 md:flex">
 
@@ -249,7 +249,7 @@ export default function Navbar() {
           </Link>
 
           {/* =================================================
-              PRODUCTS DROPDOWN
+              PRODUCTS
           ================================================== */}
 
           <div className="group relative">
@@ -273,7 +273,7 @@ export default function Navbar() {
 
               <div className="mt-3 rounded-2xl border border-slate-200 bg-white p-7 shadow-2xl">
 
-                {/* DROPDOWN HEADER */}
+                {/* HEADER */}
 
                 <div className="mb-6 border-b border-slate-200 pb-5">
 
@@ -287,7 +287,9 @@ export default function Navbar() {
 
                 </div>
 
-                {/* PRODUCT CATEGORIES */}
+                {/* =================================================
+                    FOUR MAIN COLUMNS
+                ================================================== */}
 
                 <div className="grid grid-cols-4 gap-8">
 
@@ -316,7 +318,6 @@ export default function Navbar() {
                       )}
 
                     </div>
-
                   </div>
 
                   {/* =================================================
@@ -344,7 +345,6 @@ export default function Navbar() {
                       )}
 
                     </div>
-
                   </div>
 
                   {/* =================================================
@@ -357,92 +357,130 @@ export default function Navbar() {
                       Smart Solutions
                     </h4>
 
-                    <div className="space-y-3">
+                    <div className="space-y-2">
 
-                      {/* TOWEL WARMER */}
+                      {/* =================================================
+                          AC ORTHOPAEDIC KIT DROPDOWN
+                      ================================================== */}
+
+                      <div className="group/ac relative">
+  {/* AC ORTHOPAEDIC KIT */}
+  <div className="flex cursor-pointer items-center justify-between rounded-lg px-2 py-2 text-sm font-semibold text-slate-700 transition hover:bg-sky-50 hover:text-sky-600">
+    <span>AC Orthopaedic Kit</span>
+
+    <span className="text-xs">
+      ▶
+    </span>
+  </div>
+
+  {/* DROPDOWN BELOW */}
+  <div
+    className="
+      invisible
+      max-h-0
+      overflow-hidden
+      opacity-0
+      transition-all
+      duration-300
+
+      group-hover/ac:visible
+      group-hover/ac:max-h-[500px]
+      group-hover/ac:opacity-100
+    "
+  >
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl">
+
+      {/* <div className="mb-3 border-b border-slate-100 pb-3">
+        <p className="text-xs font-semibold uppercase tracking-wider text-sky-500">
+          AC Orthopaedic Kit
+        </p>
+
+        <p className="mt-1 text-xs text-slate-400">
+          Controller Kit Variants
+        </p>
+      </div> */}
+
+      {/* 4 PRODUCTS */}
+      <div className="space-y-1">
+
+        <Link
+          href="/products/smart-solutions/ac-orthopaedic-kit"
+          className="block rounded-lg px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-sky-50 hover:text-sky-600"
+        >
+          AC Orthopaedic Controller Kit - Single Power LED
+        </Link>
+
+        <Link
+          href="/products/smart-solutions/ac-orthopaedic-kit-status"
+          className="block rounded-lg px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-sky-50 hover:text-sky-600"
+        >
+          AC Orthopaedic Controller Kit - 3 Status LEDs
+        </Link>
+
+        <Link
+          href="/products/smart-solutions/ac-orthopaedic-kit-voltage"
+          className="block rounded-lg px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-sky-50 hover:text-sky-600"
+        >
+          AC Orthopaedic Controller Kit - 3 AC Voltage LEDs
+        </Link>
+
+        <Link
+          href="/products/smart-solutions/orthopadic-kit"
+          className="block rounded-lg px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-sky-50 hover:text-sky-600"
+        >
+          AC Orthopaedic Kit - Single LED PCB
+        </Link>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+                      {/* =================================================
+                          DC ORTHOPAEDIC KIT
+                      ================================================== */}
 
                       <Link
-                        href="/products/smart-solutions/towel-warmer-controller"
-                        className="block text-sm leading-5 text-slate-500 transition hover:translate-x-1 hover:text-sky-600"
+                        href="/products/smart-solutions/dc-orthopaedic-kit"
+                        className="block rounded-lg px-2 py-2 text-sm text-slate-500 transition hover:bg-sky-50 hover:text-sky-600"
                       >
-                        Towel Warmer Controller Kit
-                      </Link>
-
-                      {/* COFFEE DISPENSER */}
-
-                      <Link
-                        href="/products/smart-solutions/coffee-dispenser-kit"
-                        className="block text-sm leading-5 text-slate-500 transition hover:translate-x-1 hover:text-sky-600"
-                      >
-                        Coffee Dispenser Kit
+                        DC Orthopaedic Kit
                       </Link>
 
                       {/* =================================================
-                          CONTROLLER KITS NESTED DROPDOWN
+                          TOWEL WARMER
                       ================================================== */}
 
-                      <div className="group/controller relative">
+                      <Link
+                        href="/products/smart-solutions/towel-warmer-controller"
+                        className="block rounded-lg px-2 py-2 text-sm text-slate-500 transition hover:bg-sky-50 hover:text-sky-600"
+                      >
+                        Towel Warmer Controller
+                      </Link>
 
-                        {/* CONTROLLER KITS BUTTON */}
+                      {/* =================================================
+                          COFFEE DISPENSER
+                      ================================================== */}
 
-                        <div className="flex cursor-pointer items-center justify-between text-sm font-semibold text-slate-700 transition hover:text-sky-600">
+                      <Link
+                        href="/products/smart-solutions/coffee-dispenser-kit"
+                        className="block rounded-lg px-2 py-2 text-sm text-slate-500 transition hover:bg-sky-50 hover:text-sky-600"
+                      >
+                        Coffee Dispenser Controller
+                      </Link>
 
-                          <span>
-                            Controller Kits
-                          </span>
+                      {/* =================================================
+                          BODY MASSAGER
+                      ================================================== */}
 
-                          <span className="text-xs">
-                            ▶
-                          </span>
-
-                        </div>
-
-                        {/* CONTROLLER KITS DROPDOWN */}
-
-                        <div className="invisible absolute left-full top-0 z-50 ml-3 w-[430px] translate-x-2 opacity-0 transition-all duration-200 group-hover/controller:visible group-hover/controller:translate-x-0 group-hover/controller:opacity-100">
-
-                          <div className="rounded-2xl border border-slate-200 bg-blue-200 p-5 shadow-2xl">
-
-                            {/* HEADER */}
-
-                            {/* <div className="mb-4 border-b border-slate-100 pb-3">
-
-                              <p className="text-xs font-semibold uppercase tracking-wider text-sky-500">
-                                Smart Solutions
-                              </p>
-
-                              <h5 className="mt-1 text-base font-semibold text-slate-900">
-                                Controller Kits
-                              </h5>
-
-                            </div> */}
-
-                            {/* CONTROLLER KIT LIST */}
-
-                            <div className="space-y-1">
-
-                              {controllerKits.map(
-                                (kit, index) => (
-                                  <Link
-                                    key={`controller-kit-${index}`}
-                                    href={kit.href}
-                                    className="block rounded-lg px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-sky-50 hover:text-sky-600"
-                                  >
-                                    {kit.name}
-                                  </Link>
-                                )
-                              )}
-
-                            </div>
-
-                          </div>
-
-                        </div>
-
-                      </div>
+                      <Link
+                        href="/products/smart-solutions/body-massager-kit"
+                        className="block rounded-lg px-2 py-2 text-sm text-slate-500 transition hover:bg-sky-50 hover:text-sky-600"
+                      >
+                        Body Massager Controller
+                      </Link>
 
                     </div>
-
                   </div>
 
                   {/* =================================================
@@ -457,7 +495,7 @@ export default function Navbar() {
 
                     <div className="space-y-3">
 
-                      {productCategories[3].products.map(
+                      {productCategories[2].products.map(
                         (product) => (
                           <Link
                             key={`lighting-${product.name}`}
@@ -470,15 +508,11 @@ export default function Navbar() {
                       )}
 
                     </div>
-
                   </div>
 
                 </div>
-
               </div>
-
             </div>
-
           </div>
 
           {/* =================================================
@@ -529,42 +563,42 @@ export default function Navbar() {
 
                 </div>
 
-                {/* SERVICES */}
+                {/* SERVICES LIST */}
 
                 <div className="grid grid-cols-2 gap-x-10 gap-y-1">
 
-                  {serviceCategories.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      className="group/service flex items-center justify-between border-b border-slate-100 py-4 transition hover:border-sky-200"
-                    >
+                  {serviceCategories.map(
+                    (service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="group/service flex items-center justify-between border-b border-slate-100 py-4 transition hover:border-sky-200"
+                      >
 
-                      <div>
+                        <div>
 
-                        <p className="text-sm font-semibold text-slate-800 transition group-hover/service:text-sky-600">
-                          {service.name}
-                        </p>
+                          <p className="text-sm font-semibold text-slate-800 transition group-hover/service:text-sky-600">
+                            {service.name}
+                          </p>
 
-                        <p className="mt-1 text-xs text-slate-400">
-                          {service.shortName}
-                        </p>
+                          <p className="mt-1 text-xs text-slate-400">
+                            {service.shortName}
+                          </p>
 
-                      </div>
+                        </div>
 
-                      <span className="text-slate-300 transition group-hover/service:translate-x-1 group-hover/service:text-sky-500">
-                        →
-                      </span>
+                        <span className="text-slate-300 transition group-hover/service:translate-x-1 group-hover/service:text-sky-500">
+                          →
+                        </span>
 
-                    </Link>
-                  ))}
+                      </Link>
+                    )
+                  )}
 
                 </div>
 
               </div>
-
             </div>
-
           </div>
 
           {/* CONTACT */}
@@ -578,9 +612,9 @@ export default function Navbar() {
 
         </nav>
 
-        {/* =====================================================
-            DESKTOP GET QUOTE
-        ====================================================== */}
+        {/* =================================================
+            GET QUOTE
+        ================================================== */}
 
         <Link
           href="/contact"
@@ -589,9 +623,9 @@ export default function Navbar() {
           Get Quote
         </Link>
 
-        {/* =====================================================
+        {/* =================================================
             MOBILE MENU BUTTON
-        ====================================================== */}
+        ================================================== */}
 
         <button
           type="button"
@@ -612,7 +646,7 @@ export default function Navbar() {
       <div
         className={`overflow-hidden border-t border-slate-100 bg-white transition-all duration-300 md:hidden ${
           menuOpen
-            ? "max-h-[2000px] opacity-100"
+            ? "max-h-[2500px] opacity-100"
             : "max-h-0 opacity-0"
         }`}
       >
@@ -652,15 +686,16 @@ export default function Navbar() {
               }
               className="flex items-center justify-between border-b border-slate-100 py-4 text-left font-medium text-slate-700"
             >
+
               <span>Products</span>
 
               <span>
                 {mobileProductsOpen ? "−" : "+"}
               </span>
+
             </button>
 
             {mobileProductsOpen && (
-
               <div className="bg-slate-50 px-4 py-4">
 
                 {/* VIEW ALL */}
@@ -699,7 +734,6 @@ export default function Navbar() {
                     )}
 
                   </div>
-
                 </div>
 
                 {/* =================================================
@@ -728,7 +762,6 @@ export default function Navbar() {
                     )}
 
                   </div>
-
                 </div>
 
                 {/* =================================================
@@ -736,6 +769,8 @@ export default function Navbar() {
                 ================================================== */}
 
                 <div className="mb-6">
+
+                  {/* SMART SOLUTIONS BUTTON */}
 
                   <button
                     type="button"
@@ -746,6 +781,7 @@ export default function Navbar() {
                     }
                     className="flex w-full items-center justify-between border-b border-slate-200 pb-3 text-left text-xs font-semibold uppercase tracking-wider text-slate-400"
                   >
+
                     <span>
                       Smart Solutions
                     </span>
@@ -755,71 +791,52 @@ export default function Navbar() {
                         ? "−"
                         : "+"}
                     </span>
+
                   </button>
 
                   {mobileSmartSolutionsOpen && (
-
                     <div className="mt-4 pl-2">
 
-                      {/* TOWEL WARMER */}
-
-                      <Link
-                        href="/products/smart-solutions/towel-warmer-controller"
-                        onClick={closeMenu}
-                        className="mb-3 block text-sm text-slate-600 hover:text-sky-600"
-                      >
-                        Towel Warmer Controller Kit
-                      </Link>
-
-                      {/* COFFEE DISPENSER */}
-
-                      <Link
-                        href="/products/smart-solutions/coffee-dispenser-kit"
-                        onClick={closeMenu}
-                        className="mb-4 block text-sm text-slate-600 hover:text-sky-600"
-                      >
-                        Coffee Dispenser Kit
-                      </Link>
-
                       {/* =================================================
-                          CONTROLLER KITS
+                          AC ORTHOPAEDIC KIT
                       ================================================== */}
 
                       <button
                         type="button"
                         onClick={() =>
-                          setMobileControllerKitsOpen(
-                            !mobileControllerKitsOpen
+                          setMobileACOrthopaedicOpen(
+                            !mobileACOrthopaedicOpen
                           )
                         }
-                        className="flex w-full items-center justify-between border-t border-slate-200 pt-1 text-left text-sm font-semibold text-slate-700"
+                        className="flex w-full items-center justify-between rounded-lg border-b border-slate-200 py-3 text-left text-sm font-semibold text-slate-700"
                       >
 
                         <span>
-                          Controller Kits
+                          AC Orthopaedic Kit
                         </span>
 
                         <span>
-                          {mobileControllerKitsOpen
+                          {mobileACOrthopaedicOpen
                             ? "−"
                             : "+"}
                         </span>
 
                       </button>
 
-                      {/* CONTROLLER KITS LIST */}
+                      {/* =================================================
+                          FOUR AC PRODUCTS
+                      ================================================== */}
 
-                      {mobileControllerKitsOpen && (
+                      {mobileACOrthopaedicOpen && (
+                        <div className="mt-2 space-y-1 rounded-lg bg-white p-2">
 
-                        <div className="mt-1 space-y-1 rounded-lg bg-white p-2">
-
-                          {controllerKits.map(
-                            (kit, index) => (
+                          {acOrthopaedicKits.map(
+                            (kit) => (
                               <Link
-                                key={`mobile-controller-kit-${index}`}
+                                key={`mobile-ac-${kit.href}`}
                                 href={kit.href}
                                 onClick={closeMenu}
-                                className="block rounded-md px-3 py-1.5 text-sm leading-1 text-slate-600 hover:bg-sky-50 hover:text-sky-600"
+                                className="block rounded-md px-3 py-2 text-sm leading-5 text-slate-600 transition hover:bg-sky-50 hover:text-sky-600"
                               >
                                 {kit.name}
                               </Link>
@@ -827,11 +844,57 @@ export default function Navbar() {
                           )}
 
                         </div>
-
                       )}
 
-                    </div>
+                      {/* =================================================
+                          DC ORTHOPAEDIC KIT
+                      ================================================== */}
 
+                      <Link
+                        href="/products/smart-solutions/dc-orthopaedic-kit"
+                        onClick={closeMenu}
+                        className="mt-3 block rounded-lg py-2 text-sm text-slate-600 hover:text-sky-600"
+                      >
+                        DC Orthopaedic Kit
+                      </Link>
+
+                      {/* =================================================
+                          TOWEL WARMER
+                      ================================================== */}
+
+                      <Link
+                        href="/products/smart-solutions/towel-warmer-controller"
+                        onClick={closeMenu}
+                        className="block rounded-lg py-2 text-sm text-slate-600 hover:text-sky-600"
+                      >
+                        Towel Warmer Controller
+                      </Link>
+
+                      {/* =================================================
+                          COFFEE DISPENSER
+                      ================================================== */}
+
+                      <Link
+                        href="/products/smart-solutions/coffee-dispenser-kit"
+                        onClick={closeMenu}
+                        className="block rounded-lg py-2 text-sm text-slate-600 hover:text-sky-600"
+                      >
+                        Coffee Dispenser Controller
+                      </Link>
+
+                      {/* =================================================
+                          BODY MASSAGER
+                      ================================================== */}
+
+                      <Link
+                        href="/products/smart-solutions/body-massager-kit"
+                        onClick={closeMenu}
+                        className="block rounded-lg py-2 text-sm text-slate-600 hover:text-sky-600"
+                      >
+                        Body Massager Controller
+                      </Link>
+
+                    </div>
                   )}
 
                 </div>
@@ -848,7 +911,7 @@ export default function Navbar() {
 
                   <div className="space-y-3">
 
-                    {productCategories[3].products.map(
+                    {productCategories[2].products.map(
                       (product) => (
                         <Link
                           key={`mobile-lighting-${product.name}`}
@@ -862,11 +925,9 @@ export default function Navbar() {
                     )}
 
                   </div>
-
                 </div>
 
               </div>
-
             )}
 
             {/* =================================================
@@ -876,16 +937,12 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() =>
-                setMobileServicesOpen(
-                  !mobileServicesOpen
-                )
+                setMobileServicesOpen(!mobileServicesOpen)
               }
               className="flex items-center justify-between border-b border-slate-100 py-4 text-left font-medium text-slate-700"
             >
 
-              <span>
-                Services
-              </span>
+              <span>Services</span>
 
               <span>
                 {mobileServicesOpen ? "−" : "+"}
@@ -894,7 +951,6 @@ export default function Navbar() {
             </button>
 
             {mobileServicesOpen && (
-
               <div className="bg-slate-50 px-4 py-4">
 
                 <Link
@@ -929,9 +985,7 @@ export default function Navbar() {
                   )}
 
                 </div>
-
               </div>
-
             )}
 
             {/* CONTACT */}
@@ -955,11 +1009,8 @@ export default function Navbar() {
             </Link>
 
           </nav>
-
         </Container>
-
       </div>
-
     </header>
   );
 }

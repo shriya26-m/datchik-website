@@ -60,7 +60,7 @@ export default function About() {
                   
 
                   // Duplicate for infinite loop
-
+  
 
                   // "/images/about/expo.jpg",
                   // "/images/about/team1.jpg",

@@ -75,21 +75,21 @@ const products = {
      BODY MASSAGE
   ====================================================== */
 
-  "body-massage/body-massager": {
-    number: "01",
-    name: "Body Massager",
-    category: "Body Massage",
-    label: "Wellness Electronics",
-    image: "/images/products/biomedical/body-massager.jpeg",
-    description:
-      "An electronic wellness product designed for practical massage and comfort applications.",
-    applications: [
-      "Personal wellness",
-      "Massage applications",
-      "Home use",
-      "Comfort applications",
-    ],
-  },
+  // "body-massage/body-massager": {
+  //   number: "01",
+  //   name: "Body Massager",
+  //   category: "Body Massage",
+  //   label: "Wellness Electronics",
+  //   image: "/images/products/biomedical/body-massager.jpeg",
+  //   description:
+  //     "An electronic wellness product designed for practical massage and comfort applications.",
+  //   applications: [
+  //     "Personal wellness",
+  //     "Massage applications",
+  //     "Home use",
+  //     "Comfort applications",
+  //   ],
+  // },
 
   /* =====================================================
      GAS DETECTION
@@ -220,22 +220,6 @@ const products = {
     ],
   },
 
-  "smart-solutions/dc-orthopaedic-kit": {
-    number: "06",
-    name: "DC Orthopaedic Controller Kit - 3 DC Level Status LEDs",
-    category: "Smart Solutions",
-    label: "Controller Kits",
-    image:
-      "/images/products/smart-solutions/DC Orthopaedic controller kit ( 1 power led + 3 different dc level status led).png",
-    description:
-      "A DC orthopaedic controller kit featuring three DC level status LED indicators for electronic control applications.",
-    applications: [
-      "Orthopaedic equipment",
-      "DC-powered applications",
-      "Level status indication",
-      "Electronic control systems",
-    ],
-  },
 
   "smart-solutions/orthopadic-kit": {
     number: "07",
@@ -268,6 +252,22 @@ const products = {
       "Wellness equipment",
       "Electronic control",
       "Personal wellness applications",
+    ],
+  },
+  "smart-solutions/dc-orthopaedic-kit": {
+    number: "06",
+    name: "DC Orthopaedic Controller Kit - 3 DC Level Status LEDs",
+    category: "Smart Solutions",
+    label: "Controller Kits",
+    image:
+      "/images/products/smart-solutions/DC Orthopaedic controller kit ( 1 power led + 3 different dc level status led).png",
+    description:
+      "A DC orthopaedic controller kit featuring three DC level status LED indicators for electronic control applications.",
+    applications: [
+      "Orthopaedic equipment",
+      "DC-powered applications",
+      "Level status indication",
+      "Electronic control systems",
     ],
   },
 
