@@ -1,20 +1,10 @@
+
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Container from "./Container";
-
-/* =========================================================
-   NAV LINKS
-========================================================= */
-
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Contact", href: "/contact" },
-];
 
 /* =========================================================
    AC ORTHOPAEDIC KIT - 4 PRODUCTS
@@ -40,36 +30,12 @@ const acOrthopaedicKits = [
 ];
 
 /* =========================================================
-   SMART SOLUTIONS PRODUCTS
-========================================================= */
-
-const smartSolutionProducts = [
-  {
-    name: "DC Orthopaedic Kit",
-    href: "/products/smart-solutions/dc-orthopaedic-kit",
-  },
-  {
-    name: "Towel Warmer Controller",
-    href: "/products/smart-solutions/towel-warmer-controller",
-  },
-  {
-    name: "Coffee Dispenser Controller",
-    href: "/products/smart-solutions/coffee-dispenser-kit",
-  },
-  {
-    name: "Body Massager Controller",
-    href: "/products/smart-solutions/body-massager-kit",
-  },
-];
-
-/* =========================================================
    PRODUCT CATEGORIES
 ========================================================= */
 
 const productCategories = [
   {
     name: "Biomedical",
-
     products: [
       {
         name: "Orthopaedic Heat Belt",
@@ -92,7 +58,6 @@ const productCategories = [
 
   {
     name: "Gas Detection",
-
     products: [
       {
         name: "LEL Gas Detector with Display",
@@ -107,7 +72,6 @@ const productCategories = [
 
   {
     name: "Lighting",
-
     products: [
       {
         name: "Panel Light",
@@ -134,6 +98,29 @@ const productCategories = [
         href: "/products/lighting/concealed-light",
       },
     ],
+  },
+];
+
+/* =========================================================
+   SMART SOLUTIONS PRODUCTS
+========================================================= */
+
+const smartSolutionProducts = [
+  {
+    name: "DC Orthopaedic Kit",
+    href: "/products/smart-solutions/dc-orthopaedic-kit",
+  },
+  {
+    name: "Towel Warmer Controller",
+    href: "/products/smart-solutions/towel-warmer-controller",
+  },
+  {
+    name: "Coffee Dispenser Controller",
+    href: "/products/smart-solutions/coffee-dispenser-kit",
+  },
+  {
+    name: "Body Massager Controller",
+    href: "/products/smart-solutions/body-massager-kit",
   },
 ];
 
@@ -175,6 +162,14 @@ const serviceCategories = [
 
 export default function Navbar() {
   /* =======================================================
+     DESKTOP STATES
+  ======================================================= */
+
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [acOrthopaedicOpen, setAcOrthopaedicOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+  /* =======================================================
      MOBILE STATES
   ======================================================= */
 
@@ -204,15 +199,59 @@ export default function Navbar() {
     setMobileServicesOpen(false);
   };
 
+  /* =======================================================
+     CLOSE ALL MENUS
+  ======================================================= */
+
+  const closeAllMenus = () => {
+    setProductsOpen(false);
+    setAcOrthopaedicOpen(false);
+    setServicesOpen(false);
+
+    setMenuOpen(false);
+    setMobileProductsOpen(false);
+    setMobileSmartSolutionsOpen(false);
+    setMobileACOrthopaedicOpen(false);
+    setMobileServicesOpen(false);
+  };
+
+  /* =======================================================
+     TOGGLE PRODUCTS
+  ======================================================= */
+
+  const toggleProducts = () => {
+    setProductsOpen((prev) => !prev);
+    setServicesOpen(false);
+    setAcOrthopaedicOpen(false);
+  };
+
+  /* =======================================================
+     TOGGLE AC ORTHOPAEDIC
+  ======================================================= */
+
+  const toggleACOrthopaedic = () => {
+    setAcOrthopaedicOpen((prev) => !prev);
+  };
+
+  /* =======================================================
+     TOGGLE SERVICES
+  ======================================================= */
+
+  const toggleServices = () => {
+    setServicesOpen((prev) => !prev);
+    setProductsOpen(false);
+    setAcOrthopaedicOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
-      <Container className="flex h-18 items-center justify-between">
+      <Container className="flex h-16 items-center justify-between">
 
         {/* =================================================
             LOGO
         ================================================== */}
 
-        <Link href="/" onClick={closeMenu}>
+        <Link href="/" onClick={closeAllMenus}>
           <Image
             src="/images/logo/datchiklogo.png"
             alt="Datchik Electronics"
@@ -230,19 +269,25 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-2 md:flex">
 
-          {/* HOME */}
+          {/* =================================================
+              HOME
+          ================================================== */}
 
           <Link
             href="/"
+            onClick={closeAllMenus}
             className="rounded-lg px-4 py-2 text-[15px] font-medium text-slate-700 transition hover:bg-sky-500 hover:text-white"
           >
             Home
           </Link>
 
-          {/* ABOUT */}
+          {/* =================================================
+              ABOUT
+          ================================================== */}
 
           <Link
             href="/about"
+            onClick={closeAllMenus}
             className="rounded-lg px-4 py-2 text-[15px] font-medium text-slate-700 transition hover:bg-sky-500 hover:text-white"
           >
             About
@@ -252,359 +297,328 @@ export default function Navbar() {
               PRODUCTS
           ================================================== */}
 
-          <div className="group relative">
+          <div className="relative">
 
             {/* PRODUCTS BUTTON */}
 
-            <Link
-              href="/products"
+            <button
+              type="button"
+              onClick={toggleProducts}
+              aria-expanded={productsOpen}
               className="flex items-center gap-2 rounded-lg px-4 py-2 text-[15px] font-medium text-slate-700 transition hover:bg-sky-500 hover:text-white"
             >
-              Products
+              <span>Products</span>
 
-              <span className="text-xs transition-transform duration-300 group-hover:rotate-180">
+              <span
+                className={`text-xs transition-transform duration-300 ${
+                  productsOpen ? "rotate-180" : ""
+                }`}
+              >
                 ▼
               </span>
-            </Link>
+            </button>
 
             {/* PRODUCTS DROPDOWN */}
 
-            <div className="invisible absolute left-1/2 top-full w-[1050px] -translate-x-1/2 translate-y-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+            {productsOpen && (
+              <div className="absolute left-1/2 top-full z-[100] w-[1050px] -translate-x-1/2">
 
-              <div className="mt-3 rounded-2xl border border-slate-200 bg-white p-7 shadow-2xl">
+                <div className="mt-3 rounded-2xl border border-slate-200 bg-white p-7 shadow-2xl">
 
-                {/* HEADER */}
+                  {/* HEADER */}
 
-                <div className="mb-6 border-b border-slate-200 pb-5">
-
-                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-500">
-                    Product Portfolio
-                  </p>
-
-                  <h3 className="mt-2 text-xl font-semibold text-slate-900">
-                    Explore Datchik Products
-                  </h3>
-
-                </div>
-
-                {/* =================================================
-                    FOUR MAIN COLUMNS
-                ================================================== */}
-
-                <div className="grid grid-cols-4 gap-8">
-
-                  {/* =================================================
-                      BIOMEDICAL
-                  ================================================== */}
-
-                  <div>
-
-                    <h4 className="mb-4 border-b border-slate-100 pb-2 text-sm font-semibold text-slate-900">
-                      Biomedical
-                    </h4>
-
-                    <div className="space-y-3">
-
-                      {productCategories[0].products.map(
-                        (product) => (
-                          <Link
-                            key={`biomedical-${product.name}`}
-                            href={product.href}
-                            className="block text-sm leading-5 text-slate-500 transition hover:translate-x-1 hover:text-sky-600"
-                          >
-                            {product.name}
-                          </Link>
-                        )
-                      )}
-
-                    </div>
-                  </div>
-
-                  {/* =================================================
-                      GAS DETECTION
-                  ================================================== */}
-
-                  <div>
-
-                    <h4 className="mb-4 border-b border-slate-100 pb-2 text-sm font-semibold text-slate-900">
-                      Gas Detection
-                    </h4>
-
-                    <div className="space-y-3">
-
-                      {productCategories[1].products.map(
-                        (product) => (
-                          <Link
-                            key={`gas-${product.name}`}
-                            href={product.href}
-                            className="block text-sm leading-5 text-slate-500 transition hover:translate-x-1 hover:text-sky-600"
-                          >
-                            {product.name}
-                          </Link>
-                        )
-                      )}
-
-                    </div>
-                  </div>
-
-                  {/* =================================================
-                      SMART SOLUTIONS
-                  ================================================== */}
-
-                  <div className="relative">
-
-                    <h4 className="mb-4 border-b border-slate-100 pb-2 text-sm font-semibold text-slate-900">
-                      Smart Solutions
-                    </h4>
-
-                    <div className="space-y-2">
-
-                      {/* =================================================
-                          AC ORTHOPAEDIC KIT DROPDOWN
-                      ================================================== */}
-
-                      <div className="group/ac relative">
-  {/* AC ORTHOPAEDIC KIT */}
-  <div className="flex cursor-pointer items-center justify-between rounded-lg px-2 py-2 text-sm font-semibold text-slate-700 transition hover:bg-sky-50 hover:text-sky-600">
-    <span>AC Orthopaedic Kit</span>
-
-    <span className="text-xs">
-      ▶
-    </span>
-  </div>
-
-  {/* DROPDOWN BELOW */}
-  <div
-    className="
-      invisible
-      max-h-0
-      overflow-hidden
-      opacity-0
-      transition-all
-      duration-300
-
-      group-hover/ac:visible
-      group-hover/ac:max-h-[500px]
-      group-hover/ac:opacity-100
-    "
-  >
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-2xl">
-
-      {/* <div className="mb-3 border-b border-slate-100 pb-3">
-        <p className="text-xs font-semibold uppercase tracking-wider text-sky-500">
-          AC Orthopaedic Kit
-        </p>
-
-        <p className="mt-1 text-xs text-slate-400">
-          Controller Kit Variants
-        </p>
-      </div> */}
-
-      {/* 4 PRODUCTS */}
-      <div className="space-y-1">
-
-        <Link
-          href="/products/smart-solutions/ac-orthopaedic-kit"
-          className="block rounded-lg px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-sky-50 hover:text-sky-600"
-        >
-          AC Orthopaedic Controller Kit - Single Power LED
-        </Link>
-
-        <Link
-          href="/products/smart-solutions/ac-orthopaedic-kit-status"
-          className="block rounded-lg px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-sky-50 hover:text-sky-600"
-        >
-          AC Orthopaedic Controller Kit - 3 Status LEDs
-        </Link>
-
-        <Link
-          href="/products/smart-solutions/ac-orthopaedic-kit-voltage"
-          className="block rounded-lg px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-sky-50 hover:text-sky-600"
-        >
-          AC Orthopaedic Controller Kit - 3 AC Voltage LEDs
-        </Link>
-
-        <Link
-          href="/products/smart-solutions/orthopadic-kit"
-          className="block rounded-lg px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-sky-50 hover:text-sky-600"
-        >
-          AC Orthopaedic Kit - Single LED PCB
-        </Link>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-                      {/* =================================================
-                          DC ORTHOPAEDIC KIT
-                      ================================================== */}
-
-                      <Link
-                        href="/products/smart-solutions/dc-orthopaedic-kit"
-                        className="block rounded-lg px-2 py-2 text-sm text-slate-500 transition hover:bg-sky-50 hover:text-sky-600"
-                      >
-                        DC Orthopaedic Kit
-                      </Link>
-
-                      {/* =================================================
-                          TOWEL WARMER
-                      ================================================== */}
-
-                      <Link
-                        href="/products/smart-solutions/towel-warmer-controller"
-                        className="block rounded-lg px-2 py-2 text-sm text-slate-500 transition hover:bg-sky-50 hover:text-sky-600"
-                      >
-                        Towel Warmer Controller
-                      </Link>
-
-                      {/* =================================================
-                          COFFEE DISPENSER
-                      ================================================== */}
-
-                      <Link
-                        href="/products/smart-solutions/coffee-dispenser-kit"
-                        className="block rounded-lg px-2 py-2 text-sm text-slate-500 transition hover:bg-sky-50 hover:text-sky-600"
-                      >
-                        Coffee Dispenser Controller
-                      </Link>
-
-                      {/* =================================================
-                          BODY MASSAGER
-                      ================================================== */}
-
-                      <Link
-                        href="/products/smart-solutions/body-massager-kit"
-                        className="block rounded-lg px-2 py-2 text-sm text-slate-500 transition hover:bg-sky-50 hover:text-sky-600"
-                      >
-                        Body Massager Controller
-                      </Link>
-
-                    </div>
-                  </div>
-
-                  {/* =================================================
-                      LIGHTING
-                  ================================================== */}
-
-                  <div>
-
-                    <h4 className="mb-4 border-b border-slate-100 pb-2 text-sm font-semibold text-slate-900">
-                      Lighting
-                    </h4>
-
-                    <div className="space-y-3">
-
-                      {productCategories[2].products.map(
-                        (product) => (
-                          <Link
-                            key={`lighting-${product.name}`}
-                            href={product.href}
-                            className="block text-sm leading-5 text-slate-500 transition hover:translate-x-1 hover:text-sky-600"
-                          >
-                            {product.name}
-                          </Link>
-                        )
-                      )}
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* =================================================
-              SERVICES DROPDOWN
-          ================================================== */}
-
-          <div className="group relative">
-
-            <Link
-              href="/services"
-              className="flex items-center gap-2 rounded-lg px-4 py-2 text-[15px] font-medium text-slate-700 transition hover:bg-sky-500 hover:text-white"
-            >
-              Services
-
-              <span className="text-xs transition-transform duration-300 group-hover:rotate-180">
-                ▼
-              </span>
-            </Link>
-
-            {/* SERVICES DROPDOWN */}
-
-            <div className="invisible absolute left-1/2 top-full w-[700px] -translate-x-1/2 translate-y-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-
-              <div className="mt-3 rounded-2xl border border-slate-200 bg-white p-7 shadow-2xl">
-
-                {/* HEADER */}
-
-                <div className="mb-6 flex items-center justify-between border-b border-slate-200 pb-5">
-
-                  <div>
+                  <div className="mb-6 border-b border-slate-200 pb-5">
 
                     <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-500">
-                      Engineering Services
+                      Product Portfolio
                     </p>
 
                     <h3 className="mt-2 text-xl font-semibold text-slate-900">
-                      Explore Our Services
+                      Explore Datchik Products
                     </h3>
 
                   </div>
 
-                  <Link
-                    href="/services"
-                    className="text-sm font-semibold text-sky-600 hover:text-sky-700"
-                  >
-                    View All Services →
-                  </Link>
+                  {/* FOUR MAIN COLUMNS */}
 
-                </div>
+                  <div className="grid grid-cols-4 gap-8">
 
-                {/* SERVICES LIST */}
+                    {/* =================================================
+                        BIOMEDICAL
+                    ================================================== */}
 
-                <div className="grid grid-cols-2 gap-x-10 gap-y-1">
+                    <div>
 
-                  {serviceCategories.map(
-                    (service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="group/service flex items-center justify-between border-b border-slate-100 py-4 transition hover:border-sky-200"
-                      >
+                      <h4 className="mb-4 border-b border-slate-100 pb-2 text-sm font-semibold text-slate-900">
+                        Biomedical
+                      </h4>
+
+                      <div className="space-y-3">
+
+                        {productCategories[0].products.map(
+                          (product) => (
+                            <Link
+                              key={`biomedical-${product.name}`}
+                              href={product.href}
+                              onClick={closeAllMenus}
+                              className="block text-sm leading-5 text-slate-500 transition hover:translate-x-1 hover:text-sky-600"
+                            >
+                              {product.name}
+                            </Link>
+                          )
+                        )}
+
+                      </div>
+                    </div>
+
+                    {/* =================================================
+                        GAS DETECTION
+                    ================================================== */}
+
+                    <div>
+
+                      <h4 className="mb-4 border-b border-slate-100 pb-2 text-sm font-semibold text-slate-900">
+                        Gas Detection
+                      </h4>
+
+                      <div className="space-y-3">
+
+                        {productCategories[1].products.map(
+                          (product) => (
+                            <Link
+                              key={`gas-${product.name}`}
+                              href={product.href}
+                              onClick={closeAllMenus}
+                              className="block text-sm leading-5 text-slate-500 transition hover:translate-x-1 hover:text-sky-600"
+                            >
+                              {product.name}
+                            </Link>
+                          )
+                        )}
+
+                      </div>
+                    </div>
+
+                    {/* =================================================
+                        SMART SOLUTIONS
+                    ================================================== */}
+
+                    <div>
+
+                      <h4 className="mb-4 border-b border-slate-100 pb-2 text-sm font-semibold text-slate-900">
+                        Smart Solutions
+                      </h4>
+
+                      <div className="space-y-2">
+
+                        {/* =================================================
+                            AC ORTHOPAEDIC KIT
+                        ================================================== */}
 
                         <div>
 
-                          <p className="text-sm font-semibold text-slate-800 transition group-hover/service:text-sky-600">
-                            {service.name}
-                          </p>
+                          <button
+                            type="button"
+                            onClick={toggleACOrthopaedic}
+                            aria-expanded={acOrthopaedicOpen}
+                            className="flex w-full items-center justify-between rounded-lg px-2 py-2 text-left text-sm font-semibold text-slate-700 transition hover:bg-sky-50 hover:text-sky-600"
+                          >
+                            <span>
+                              AC Orthopaedic Kit
+                            </span>
 
-                          <p className="mt-1 text-xs text-slate-400">
-                            {service.shortName}
-                          </p>
+                            <span className="text-xs">
+                              {acOrthopaedicOpen ? "▼" : "▶"}
+                            </span>
+                          </button>
+
+                          {/* AC PRODUCTS - BELOW */}
+
+                          {acOrthopaedicOpen && (
+                            <div className="mt-2 rounded-xl border border-slate-200 bg-slate-50 p-2">
+
+                              <div className="space-y-1">
+
+                                {acOrthopaedicKits.map(
+                                  (kit) => (
+                                    <Link
+                                      key={`desktop-ac-${kit.href}`}
+                                      href={kit.href}
+                                      onClick={closeAllMenus}
+                                      className="block rounded-lg px-3 py-2.5 text-sm leading-5 text-slate-600 transition hover:bg-white hover:text-sky-600"
+                                    >
+                                      {kit.name}
+                                    </Link>
+                                  )
+                                )}
+
+                              </div>
+
+                            </div>
+                          )}
 
                         </div>
 
-                        <span className="text-slate-300 transition group-hover/service:translate-x-1 group-hover/service:text-sky-500">
-                          →
-                        </span>
+                        {/* =================================================
+                            OTHER SMART SOLUTIONS
+                        ================================================== */}
 
-                      </Link>
-                    )
-                  )}
+                        {smartSolutionProducts.map(
+                          (product) => (
+                            <Link
+                              key={`smart-${product.name}`}
+                              href={product.href}
+                              onClick={closeAllMenus}
+                              className="block rounded-lg px-2 py-2 text-sm text-slate-500 transition hover:bg-sky-50 hover:text-sky-600"
+                            >
+                              {product.name}
+                            </Link>
+                          )
+                        )}
 
+                      </div>
+                    </div>
+
+                    {/* =================================================
+                        LIGHTING
+                    ================================================== */}
+
+                    <div>
+
+                      <h4 className="mb-4 border-b border-slate-100 pb-2 text-sm font-semibold text-slate-900">
+                        Lighting
+                      </h4>
+
+                      <div className="space-y-3">
+
+                        {productCategories[2].products.map(
+                          (product) => (
+                            <Link
+                              key={`lighting-${product.name}`}
+                              href={product.href}
+                              onClick={closeAllMenus}
+                              className="block text-sm leading-5 text-slate-500 transition hover:translate-x-1 hover:text-sky-600"
+                            >
+                              {product.name}
+                            </Link>
+                          )
+                        )}
+
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
-
               </div>
-            </div>
+            )}
           </div>
 
-          {/* CONTACT */}
+          {/* =================================================
+              SERVICES
+          ================================================== */}
+
+          <div className="relative">
+
+            {/* SERVICES BUTTON */}
+
+            <button
+              type="button"
+              onClick={toggleServices}
+              aria-expanded={servicesOpen}
+              className="flex items-center gap-2 rounded-lg px-4 py-2 text-[15px] font-medium text-slate-700 transition hover:bg-sky-500 hover:text-white"
+            >
+              <span>Services</span>
+
+              <span
+                className={`text-xs transition-transform duration-300 ${
+                  servicesOpen ? "rotate-180" : ""
+                }`}
+              >
+                ▼
+              </span>
+            </button>
+
+            {/* SERVICES DROPDOWN */}
+
+            {servicesOpen && (
+              <div className="absolute left-1/2 top-full z-[100] w-[700px] -translate-x-1/2">
+
+                <div className="mt-3 rounded-2xl border border-slate-200 bg-white p-7 shadow-2xl">
+
+                  {/* HEADER */}
+
+                  <div className="mb-6 flex items-center justify-between border-b border-slate-200 pb-5">
+
+                    <div>
+
+                      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-500">
+                        Engineering Services
+                      </p>
+
+                      <h3 className="mt-2 text-xl font-semibold text-slate-900">
+                        Explore Our Services
+                      </h3>
+
+                    </div>
+
+                    <Link
+                      href="/services"
+                      onClick={closeAllMenus}
+                      className="text-sm font-semibold text-sky-600 hover:text-sky-700"
+                    >
+                      View All Services →
+                    </Link>
+
+                  </div>
+
+                  {/* SERVICES LIST */}
+
+                  <div className="grid grid-cols-2 gap-x-10 gap-y-1">
+
+                    {serviceCategories.map(
+                      (service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          onClick={closeAllMenus}
+                          className="group/service flex items-center justify-between border-b border-slate-100 py-4 transition hover:border-sky-200"
+                        >
+
+                          <div>
+
+                            <p className="text-sm font-semibold text-slate-800 transition group-hover/service:text-sky-600">
+                              {service.name}
+                            </p>
+
+                            <p className="mt-1 text-xs text-slate-400">
+                              {service.shortName}
+                            </p>
+
+                          </div>
+
+                          <span className="text-slate-300 transition group-hover/service:translate-x-1 group-hover/service:text-sky-500">
+                            →
+                          </span>
+
+                        </Link>
+                      )
+                    )}
+
+                  </div>
+
+                </div>
+              </div>
+            )}
+
+          </div>
+
+          {/* =================================================
+              CONTACT
+          ================================================== */}
 
           <Link
             href="/contact"
+            onClick={closeAllMenus}
             className="rounded-lg px-4 py-2 text-[15px] font-medium text-slate-700 transition hover:bg-sky-500 hover:text-white"
           >
             Contact
@@ -618,6 +632,7 @@ export default function Navbar() {
 
         <Link
           href="/contact"
+          onClick={closeAllMenus}
           className="hidden rounded-lg bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-600 hover:shadow-lg md:inline-flex"
         >
           Get Quote
@@ -629,7 +644,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((prev) => !prev)}
           className="flex h-11 w-11 items-center justify-center rounded-lg border border-slate-200 text-slate-700 md:hidden"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
@@ -682,17 +697,18 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() =>
-                setMobileProductsOpen(!mobileProductsOpen)
+                setMobileProductsOpen(
+                  (prev) => !prev
+                )
               }
               className="flex items-center justify-between border-b border-slate-100 py-4 text-left font-medium text-slate-700"
+              aria-expanded={mobileProductsOpen}
             >
-
               <span>Products</span>
 
               <span>
                 {mobileProductsOpen ? "−" : "+"}
               </span>
-
             </button>
 
             {mobileProductsOpen && (
@@ -708,9 +724,7 @@ export default function Navbar() {
                   View All Products →
                 </Link>
 
-                {/* =================================================
-                    BIOMEDICAL
-                ================================================== */}
+                {/* BIOMEDICAL */}
 
                 <div className="mb-6">
 
@@ -736,9 +750,7 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                {/* =================================================
-                    GAS DETECTION
-                ================================================== */}
+                {/* GAS DETECTION */}
 
                 <div className="mb-6">
 
@@ -770,18 +782,16 @@ export default function Navbar() {
 
                 <div className="mb-6">
 
-                  {/* SMART SOLUTIONS BUTTON */}
-
                   <button
                     type="button"
                     onClick={() =>
                       setMobileSmartSolutionsOpen(
-                        !mobileSmartSolutionsOpen
+                        (prev) => !prev
                       )
                     }
                     className="flex w-full items-center justify-between border-b border-slate-200 pb-3 text-left text-xs font-semibold uppercase tracking-wider text-slate-400"
+                    aria-expanded={mobileSmartSolutionsOpen}
                   >
-
                     <span>
                       Smart Solutions
                     </span>
@@ -791,26 +801,23 @@ export default function Navbar() {
                         ? "−"
                         : "+"}
                     </span>
-
                   </button>
 
                   {mobileSmartSolutionsOpen && (
                     <div className="mt-4 pl-2">
 
-                      {/* =================================================
-                          AC ORTHOPAEDIC KIT
-                      ================================================== */}
+                      {/* AC ORTHOPAEDIC KIT */}
 
                       <button
                         type="button"
                         onClick={() =>
                           setMobileACOrthopaedicOpen(
-                            !mobileACOrthopaedicOpen
+                            (prev) => !prev
                           )
                         }
                         className="flex w-full items-center justify-between rounded-lg border-b border-slate-200 py-3 text-left text-sm font-semibold text-slate-700"
+                        aria-expanded={mobileACOrthopaedicOpen}
                       >
-
                         <span>
                           AC Orthopaedic Kit
                         </span>
@@ -820,12 +827,9 @@ export default function Navbar() {
                             ? "−"
                             : "+"}
                         </span>
-
                       </button>
 
-                      {/* =================================================
-                          FOUR AC PRODUCTS
-                      ================================================== */}
+                      {/* FOUR AC PRODUCTS */}
 
                       {mobileACOrthopaedicOpen && (
                         <div className="mt-2 space-y-1 rounded-lg bg-white p-2">
@@ -846,53 +850,24 @@ export default function Navbar() {
                         </div>
                       )}
 
-                      {/* =================================================
-                          DC ORTHOPAEDIC KIT
-                      ================================================== */}
+                      {/* OTHER SMART SOLUTIONS */}
 
-                      <Link
-                        href="/products/smart-solutions/dc-orthopaedic-kit"
-                        onClick={closeMenu}
-                        className="mt-3 block rounded-lg py-2 text-sm text-slate-600 hover:text-sky-600"
-                      >
-                        DC Orthopaedic Kit
-                      </Link>
-
-                      {/* =================================================
-                          TOWEL WARMER
-                      ================================================== */}
-
-                      <Link
-                        href="/products/smart-solutions/towel-warmer-controller"
-                        onClick={closeMenu}
-                        className="block rounded-lg py-2 text-sm text-slate-600 hover:text-sky-600"
-                      >
-                        Towel Warmer Controller
-                      </Link>
-
-                      {/* =================================================
-                          COFFEE DISPENSER
-                      ================================================== */}
-
-                      <Link
-                        href="/products/smart-solutions/coffee-dispenser-kit"
-                        onClick={closeMenu}
-                        className="block rounded-lg py-2 text-sm text-slate-600 hover:text-sky-600"
-                      >
-                        Coffee Dispenser Controller
-                      </Link>
-
-                      {/* =================================================
-                          BODY MASSAGER
-                      ================================================== */}
-
-                      <Link
-                        href="/products/smart-solutions/body-massager-kit"
-                        onClick={closeMenu}
-                        className="block rounded-lg py-2 text-sm text-slate-600 hover:text-sky-600"
-                      >
-                        Body Massager Controller
-                      </Link>
+                      {smartSolutionProducts.map(
+                        (product, index) => (
+                          <Link
+                            key={`mobile-smart-${product.name}`}
+                            href={product.href}
+                            onClick={closeMenu}
+                            className={`block rounded-lg py-2 text-sm text-slate-600 hover:text-sky-600 ${
+                              index === 0
+                                ? "mt-3"
+                                : ""
+                            }`}
+                          >
+                            {product.name}
+                          </Link>
+                        )
+                      )}
 
                     </div>
                   )}
@@ -937,17 +912,18 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() =>
-                setMobileServicesOpen(!mobileServicesOpen)
+                setMobileServicesOpen(
+                  (prev) => !prev
+                )
               }
               className="flex items-center justify-between border-b border-slate-100 py-4 text-left font-medium text-slate-700"
+              aria-expanded={mobileServicesOpen}
             >
-
               <span>Services</span>
 
               <span>
                 {mobileServicesOpen ? "−" : "+"}
               </span>
-
             </button>
 
             {mobileServicesOpen && (
@@ -971,7 +947,6 @@ export default function Navbar() {
                         onClick={closeMenu}
                         className="flex items-center justify-between border-b border-slate-100 py-3 text-sm text-slate-600 transition hover:text-sky-500"
                       >
-
                         <span>
                           {service.name}
                         </span>
@@ -979,7 +954,6 @@ export default function Navbar() {
                         <span>
                           →
                         </span>
-
                       </Link>
                     )
                   )}
@@ -1014,3 +988,4 @@ export default function Navbar() {
     </header>
   );
 }
+

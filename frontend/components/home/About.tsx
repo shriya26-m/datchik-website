@@ -86,7 +86,7 @@ export default function About() {
                     alt="Datchick Electronics"
                     width={600}
                     height={380}
-                    className="rounded-2xl object-cover"
+                    className="w-full h-auto rounded-2xl object-cover"
                   />
                 ))}
               </div>
